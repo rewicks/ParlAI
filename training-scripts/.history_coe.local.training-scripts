@@ -1,0 +1,6 @@
+2020 Feb 10 Mon 18:50:17 EST test1 /home/hltcoe/rwicks/ParlAI/training-scripts  1014  cd training-scripts/
+2020 Feb 10 Mon 18:50:17 EST test1 /home/hltcoe/rwicks/ParlAI/training-scripts  1015  ls
+2020 Feb 10 Mon 18:53:43 EST test1 /home/hltcoe/rwicks/ParlAI/training-scripts  1016  vim train.sh 
+2020 Feb 10 Mon 18:54:21 EST test1 /home/hltcoe/rwicks/ParlAI/training-scripts  1017  vim train-single.sh 
+2020 Feb 10 Mon 18:55:02 EST test1 /home/hltcoe/rwicks/ParlAI/training-scripts  1018  vim train.sh
+2020 Feb 10 Mon 18:56:26 EST test1 /home/hltcoe/rwicks/ParlAI/training-scripts  1019  ls

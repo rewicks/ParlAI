@@ -26,6 +26,5 @@ python -m parlai.scripts.multiprocessing_train \
         --bidirectional True \
         --attention general \
         -veps 0.5 \
-        -lr 0.001 \
         --dropout 0.1 \
         -sval True

@@ -18,3 +18,28 @@
 2020 Feb 10 Mon 11:45:40 EST test1 /home/hltcoe/rwicks/ParlAI  1147  git checkout submission
 2020 Feb 10 Mon 11:45:45 EST test1 /home/hltcoe/rwicks/ParlAI  1148  ls
 2020 Feb 10 Mon 11:45:54 EST test1 /home/hltcoe/rwicks/ParlAI  1149  git checkout -b final-submission
+2020 Feb 10 Mon 11:45:58 EST test1 /home/hltcoe/rwicks/ParlAI  1150  git add -A
+2020 Feb 10 Mon 11:46:05 EST test1 /home/hltcoe/rwicks/ParlAI  1151  git commit -m "final submission"
+2020 Feb 10 Mon 11:46:11 EST test1 /home/hltcoe/rwicks/ParlAI  1152  git push
+2020 Feb 10 Mon 11:46:11 EST test1 /home/hltcoe/rwicks/ParlAI  1153  ls
+2020 Feb 10 Mon 11:46:13 EST test1 /home/hltcoe/rwicks/ParlAI  1154  ls chat_logs/
+2020 Feb 10 Mon 11:46:16 EST test1 /home/hltcoe/rwicks/ParlAI  1155  ls training-logs/
+2020 Feb 10 Mon 11:46:19 EST test1 /home/hltcoe/rwicks/ParlAI  1156  ls training-scripts/
+2020 Feb 10 Mon 11:46:22 EST test1 /home/hltcoe/rwicks/ParlAI  1157  git push
+2020 Feb 10 Mon 11:46:43 EST test1 /home/hltcoe/rwicks/ParlAI  1158  git push -u origin final-submission
+2020 Feb 10 Mon 11:46:53 EST test1 /home/hltcoe/rwicks/ParlAI  1158  git push -u origin final-submission
+2020 Feb 10 Mon 11:52:33 EST test1 /home/hltcoe/rwicks/ParlAI  1159  ls
+2020 Feb 10 Mon 18:00:16 EST test1 /exp/rwicks/ParlAI  1005  clear
+2020 Feb 10 Mon 18:00:16 EST test1 /exp/rwicks/ParlAI  1006  ls
+2020 Feb 10 Mon 18:50:12 EST test1 /home/hltcoe/rwicks/ParlAI  1012  cd ParlAI/
+2020 Feb 10 Mon 18:50:12 EST test1 /home/hltcoe/rwicks/ParlAI  1013  ls
+2020 Feb 10 Mon 18:56:30 EST test1 /home/hltcoe/rwicks/ParlAI  1020  cd ..
+2020 Feb 10 Mon 18:56:35 EST test1 /home/hltcoe/rwicks/ParlAI  1021  git checkout master
+2020 Feb 10 Mon 18:56:41 EST test1 /home/hltcoe/rwicks/ParlAI  1022  git add -A
+2020 Feb 10 Mon 18:56:54 EST test1 /home/hltcoe/rwicks/ParlAI  1023  git push
+2020 Feb 10 Mon 18:56:58 EST test1 /home/hltcoe/rwicks/ParlAI  1024  git checkout master
+2020 Feb 10 Mon 18:57:18 EST test1 /home/hltcoe/rwicks/ParlAI  1025  git push -u origin final-submission
+2020 Feb 10 Mon 18:57:19 EST test1 /home/hltcoe/rwicks/ParlAI  1026  ls
+2020 Feb 10 Mon 18:57:24 EST test1 /home/hltcoe/rwicks/ParlAI  1027  git add -R -A
+2020 Feb 10 Mon 18:57:35 EST test1 /home/hltcoe/rwicks/ParlAI  1028  git add training-scripts/train
+2020 Feb 10 Mon 18:57:36 EST test1 /home/hltcoe/rwicks/ParlAI  1029  git add training-scripts/train.sh
