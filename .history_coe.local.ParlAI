@@ -43,3 +43,11 @@
 2020 Feb 10 Mon 18:57:24 EST test1 /home/hltcoe/rwicks/ParlAI  1027  git add -R -A
 2020 Feb 10 Mon 18:57:35 EST test1 /home/hltcoe/rwicks/ParlAI  1028  git add training-scripts/train
 2020 Feb 10 Mon 18:57:36 EST test1 /home/hltcoe/rwicks/ParlAI  1029  git add training-scripts/train.sh
+2020 Feb 10 Mon 18:57:43 EST test1 /home/hltcoe/rwicks/ParlAI  1030  git add ./.history_coe.local.ParlAI
+2020 Feb 10 Mon 18:57:54 EST test1 /home/hltcoe/rwicks/ParlAI  1031  git commit -m "changed learning rate"
+2020 Feb 10 Mon 18:58:02 EST test1 /home/hltcoe/rwicks/ParlAI  1032  git push
+2020 Feb 10 Mon 18:58:04 EST test1 /home/hltcoe/rwicks/ParlAI  1033  ls
+2020 Feb 10 Mon 18:58:08 EST test1 /home/hltcoe/rwicks/ParlAI  1034  git checkout master
+2020 Feb 10 Mon 18:58:23 EST test1 /home/hltcoe/rwicks/ParlAI  1035  vim .gitignore
+2020 Feb 10 Mon 18:58:27 EST test1 /home/hltcoe/rwicks/ParlAI  1036  git rm .history_coe.local.ParlAI
+2020 Feb 10 Mon 18:58:41 EST test1 /home/hltcoe/rwicks/ParlAI  1037  git commit -m "ignoring hidden files"
