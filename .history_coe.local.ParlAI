@@ -1,0 +1,20 @@
+2020 Feb 10 Mon 11:42:44 EST test1 /home/hltcoe/rwicks/ParlAI  1130  rm -f .* -r
+2020 Feb 10 Mon 11:42:46 EST test1 /home/hltcoe/rwicks/ParlAI  1131  ls
+2020 Feb 10 Mon 11:42:49 EST test1 /home/hltcoe/rwicks/ParlAI  1132  git add -A
+2020 Feb 10 Mon 11:42:57 EST test1 /home/hltcoe/rwicks/ParlAI  1133  git init
+2020 Feb 10 Mon 11:43:20 EST test1 /home/hltcoe/rwicks/ParlAI  1134  git remote add origin master https://github.com/rewicks/ParlAI/tree/submission
+2020 Feb 10 Mon 11:43:25 EST test1 /home/hltcoe/rwicks/ParlAI  1135  git remote add https://github.com/rewicks/ParlAI/tree/submission
+2020 Feb 10 Mon 11:44:26 EST test1 /home/hltcoe/rwicks/ParlAI  1136  git remote add origin https://github.com/rewicks/ParlAI/tree/submission
+2020 Feb 10 Mon 11:44:32 EST test1 /home/hltcoe/rwicks/ParlAI  1137  git stats
+2020 Feb 10 Mon 11:44:35 EST test1 /home/hltcoe/rwicks/ParlAI  1138  git status
+2020 Feb 10 Mon 11:44:41 EST test1 /home/hltcoe/rwicks/ParlAI  1139  git branch
+2020 Feb 10 Mon 11:45:04 EST test1 /home/hltcoe/rwicks/ParlAI  1140  git remote rm origin
+2020 Feb 10 Mon 11:45:09 EST test1 /home/hltcoe/rwicks/ParlAI  1141  git remote add origin https://github.com/rewicks/ParlAI.git
+2020 Feb 10 Mon 11:45:13 EST test1 /home/hltcoe/rwicks/ParlAI  1142  git branch
+2020 Feb 10 Mon 11:45:15 EST test1 /home/hltcoe/rwicks/ParlAI  1143  bit status
+2020 Feb 10 Mon 11:45:18 EST test1 /home/hltcoe/rwicks/ParlAI  1144  git status
+2020 Feb 10 Mon 11:45:28 EST test1 /home/hltcoe/rwicks/ParlAI  1145  git pull
+2020 Feb 10 Mon 11:45:34 EST test1 /home/hltcoe/rwicks/ParlAI  1146  git status
+2020 Feb 10 Mon 11:45:40 EST test1 /home/hltcoe/rwicks/ParlAI  1147  git checkout submission
+2020 Feb 10 Mon 11:45:45 EST test1 /home/hltcoe/rwicks/ParlAI  1148  ls
+2020 Feb 10 Mon 11:45:54 EST test1 /home/hltcoe/rwicks/ParlAI  1149  git checkout -b final-submission

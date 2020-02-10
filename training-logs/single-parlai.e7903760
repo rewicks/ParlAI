@@ -1,0 +1,46 @@
+Traceback (most recent call last):
+  File "/exp/rwicks/ParlAI/parlai/core/torch_generator_agent.py", line 650, in train_step
+    self.backward(loss)
+  File "/exp/rwicks/ParlAI/parlai/core/torch_agent.py", line 1755, in backward
+    loss.backward()
+  File "/home/hltcoe/rwicks/.conda/envs/py3/lib/python3.7/site-packages/torch/tensor.py", line 118, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph)
+  File "/home/hltcoe/rwicks/.conda/envs/py3/lib/python3.7/site-packages/torch/autograd/__init__.py", line 93, in backward
+    allow_unreachable=True)  # allow_unreachable flag
+RuntimeError: CUDA out of memory. Tried to allocate 3.39 GiB (GPU 0; 10.73 GiB total capacity; 9.29 GiB already allocated; 217.56 MiB free; 315.40 MiB cached)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/exp/rwicks/ParlAI/parlai/core/torch_generator_agent.py", line 470, in _init_cuda_buffer
+    self.backward(loss)
+  File "/exp/rwicks/ParlAI/parlai/core/torch_agent.py", line 1755, in backward
+    loss.backward()
+  File "/home/hltcoe/rwicks/.conda/envs/py3/lib/python3.7/site-packages/torch/tensor.py", line 118, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph)
+  File "/home/hltcoe/rwicks/.conda/envs/py3/lib/python3.7/site-packages/torch/autograd/__init__.py", line 93, in backward
+    allow_unreachable=True)  # allow_unreachable flag
+RuntimeError: CUDA out of memory. Tried to allocate 420.00 MiB (GPU 0; 10.73 GiB total capacity; 9.31 GiB already allocated; 217.56 MiB free; 292.37 MiB cached)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hltcoe/rwicks/.conda/envs/py3/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/hltcoe/rwicks/.conda/envs/py3/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/exp/rwicks/ParlAI/parlai/scripts/train_model.py", line 799, in <module>
+    TrainLoop(setup_args().parse_args()).train()
+  File "/exp/rwicks/ParlAI/parlai/scripts/train_model.py", line 703, in train
+    world.parley()
+  File "/exp/rwicks/ParlAI/parlai/core/worlds.py", line 859, in parley
+    batch_act = self.batch_act(agent_idx, batch_observations[agent_idx])
+  File "/exp/rwicks/ParlAI/parlai/core/worlds.py", line 827, in batch_act
+    batch_actions = a.batch_act(batch_observation)
+  File "/exp/rwicks/ParlAI/parlai/core/torch_agent.py", line 1706, in batch_act
+    output = self.train_step(batch)
+  File "/exp/rwicks/ParlAI/parlai/core/torch_generator_agent.py", line 663, in train_step
+    self._init_cuda_buffer(8, 8, True)
+  File "/exp/rwicks/ParlAI/parlai/core/torch_generator_agent.py", line 479, in _init_cuda_buffer
+    raise RuntimeError(m)
+RuntimeError: CUDA OOM: Lower batch size (-bs) from 8 or lower  max sequence length (-tr) from 8
