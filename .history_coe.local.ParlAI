@@ -1,0 +1,444 @@
+2020 Feb 08 Sat 19:47:37 EST r7n06 /exp/rwicks/ParlAI  1089  cd ParlAI/
+2020 Feb 08 Sat 19:47:38 EST r7n06 /exp/rwicks/ParlAI  1090  ls
+2020 Feb 08 Sat 19:47:44 EST r7n06 /exp/rwicks/ParlAI  1091  cp ~/train.sh ./
+2020 Feb 08 Sat 19:47:45 EST r7n06 /exp/rwicks/ParlAI  1092  ls
+2020 Feb 08 Sat 19:48:10 EST r7n06 /exp/rwicks/ParlAI  1093  sh train.sh | tee output.txt
+2020 Feb 08 Sat 19:49:03 EST r7n06 /exp/rwicks/ParlAI  1094  vim train.sh 
+2020 Feb 08 Sat 19:49:17 EST r7n06 /exp/rwicks/ParlAI  1095  sh train.sh | tee output.txt
+2020 Feb 08 Sat 19:50:21 EST r7n06 /exp/rwicks/ParlAI  1096  view output.txt 
+2020 Feb 08 Sat 19:50:27 EST r7n06 /exp/rwicks/ParlAI  1097  ls models
+2020 Feb 08 Sat 19:51:47 EST r7n06 /exp/rwicks/ParlAI  1098  vim train.sh 
+2020 Feb 08 Sat 19:52:35 EST r7n06 /home/hltcoe/rwicks/ParlAI  1008  cd ParlAI/
+2020 Feb 08 Sat 19:52:36 EST r7n06 /home/hltcoe/rwicks/ParlAI  1009  ls
+2020 Feb 08 Sat 19:55:28 EST r7n06 /home/hltcoe/rwicks/ParlAI  1010  ls model
+2020 Feb 08 Sat 19:55:32 EST r7n06 /home/hltcoe/rwicks/ParlAI  1011  ls models
+2020 Feb 08 Sat 19:55:34 EST r7n06 /home/hltcoe/rwicks/ParlAI  1012  ls
+2020 Feb 08 Sat 19:55:44 EST r7n06 /home/hltcoe/rwicks/ParlAI  1013  mkdir models
+2020 Feb 08 Sat 19:55:46 EST r7n06 /home/hltcoe/rwicks/ParlAI  1014  ls
+2020 Feb 08 Sat 19:55:53 EST r7n06 /home/hltcoe/rwicks/ParlAI  1015  ls mdodels
+2020 Feb 08 Sat 19:55:56 EST r7n06 /home/hltcoe/rwicks/ParlAI  1016  ls models
+2020 Feb 08 Sat 20:06:27 EST r7n06 /home/hltcoe/rwicks/ParlAI  1017  watch nvidia-smi
+2020 Feb 08 Sat 20:06:31 EST r7n06 /home/hltcoe/rwicks/ParlAI  1018  tail output.txt 
+2020 Feb 08 Sat 20:06:34 EST r7n06 /home/hltcoe/rwicks/ParlAI  1018  tail output.txt 
+2020 Feb 08 Sat 20:06:42 EST r7n06 /home/hltcoe/rwicks/ParlAI  1019  head output.txt 
+2020 Feb 08 Sat 20:06:51 EST r7n06 /home/hltcoe/rwicks/ParlAI  1020  rm output.txt 
+2020 Feb 08 Sat 20:06:52 EST r7n06 /home/hltcoe/rwicks/ParlAI  1021  ls
+2020 Feb 08 Sat 20:06:54 EST r7n06 /home/hltcoe/rwicks/ParlAI  1022  ls models/
+2020 Feb 08 Sat 20:06:59 EST r7n06 /home/hltcoe/rwicks/ParlAI  1023  ls projects/
+2020 Feb 08 Sat 20:07:05 EST r7n06 /exp/rwicks/ParlAI  1099  sh train.sh | tee output.txt
+2020 Feb 08 Sat 20:07:12 EST r7n06 /home/hltcoe/rwicks/ParlAI  1024  head output.txt 
+2020 Feb 08 Sat 20:07:30 EST r7n06 /home/hltcoe/rwicks/ParlAI  1025  vim train.sh
+2020 Feb 08 Sat 20:07:33 EST r7n06 /home/hltcoe/rwicks/ParlAI  1026  ls
+2020 Feb 08 Sat 20:07:35 EST r7n06 /home/hltcoe/rwicks/ParlAI  1027  cat train.sh 
+2020 Feb 08 Sat 20:08:02 EST r7n06 /home/hltcoe/rwicks/ParlAI  1028  ls models/
+2020 Feb 08 Sat 20:08:59 EST r7n06 /home/hltcoe/rwicks/ParlAI  1035  cd ..
+2020 Feb 08 Sat 20:09:00 EST r7n06 /home/hltcoe/rwicks/ParlAI  1036  ls
+2020 Feb 08 Sat 20:10:11 EST r7n06 /home/hltcoe/rwicks/ParlAI  1037  vim train.sh 
+2020 Feb 08 Sat 20:10:13 EST r7n06 /home/hltcoe/rwicks/ParlAI  1038  nvidia-smi
+2020 Feb 08 Sat 20:10:22 EST r7n06 /home/hltcoe/rwicks/ParlAI  1039  kill 79839
+2020 Feb 08 Sat 20:10:32 EST r7n06 /home/hltcoe/rwicks/ParlAI  1040  nvidia-smi
+2020 Feb 08 Sat 20:10:34 EST r7n06 /home/hltcoe/rwicks/ParlAI  1041  ls
+2020 Feb 08 Sat 20:10:42 EST r7n06 /exp/rwicks/ParlAI   998  sh train.sh | tee output.txt
+2020 Feb 08 Sat 20:10:43 EST r7n06 /exp/rwicks/ParlAI   999  ls
+2020 Feb 08 Sat 20:11:02 EST r7n06 /home/hltcoe/rwicks/ParlAI  1042  head output.txt 
+2020 Feb 08 Sat 20:12:35 EST r7n06 /home/hltcoe/rwicks/ParlAI  1043  watch nvidia-smi
+2020 Feb 08 Sat 20:12:35 EST r7n06 /exp/rwicks/ParlAI  1000  sh train.sh | tee output.txt
+2020 Feb 08 Sat 20:12:41 EST r7n06 /home/hltcoe/rwicks/ParlAI  1044  conda deactivate
+2020 Feb 08 Sat 20:12:50 EST r7n06 /home/hltcoe/rwicks/ParlAI  1045  conda activate py3
+2020 Feb 08 Sat 20:13:32 EST r7n06 /home/hltcoe/rwicks/ParlAI  1046  watch nvidia-smi
+2020 Feb 08 Sat 20:13:40 EST r7n06 /home/hltcoe/rwicks/ParlAI  1047  nvidia-smi
+2020 Feb 08 Sat 20:13:45 EST r7n06 /home/hltcoe/rwicks/ParlAI  1048  kill 84319
+2020 Feb 08 Sat 20:13:45 EST r7n06 /exp/rwicks/ParlAI  1000  sh train.sh | tee output.txt
+2020 Feb 08 Sat 20:13:51 EST r7n06 /home/hltcoe/rwicks/ParlAI  1049  kill 84684
+2020 Feb 08 Sat 20:13:55 EST r7n06 /home/hltcoe/rwicks/ParlAI  1050  nvidia-smi
+2020 Feb 08 Sat 20:14:02 EST r7n06 /home/hltcoe/rwicks/ParlAI  1051  kill 83564
+2020 Feb 08 Sat 20:14:09 EST r7n06 /home/hltcoe/rwicks/ParlAI  1052  kill 83684
+2020 Feb 08 Sat 20:14:10 EST r7n06 /home/hltcoe/rwicks/ParlAI  1053  kill 83685
+2020 Feb 08 Sat 20:14:11 EST r7n06 /home/hltcoe/rwicks/ParlAI  1054  kill 83686
+2020 Feb 08 Sat 20:14:18 EST r7n06 /home/hltcoe/rwicks/ParlAI  1055  nvidia-smi
+2020 Feb 08 Sat 20:14:27 EST r7n06 /home/hltcoe/rwicks/ParlAI  1056  kill 83685
+2020 Feb 08 Sat 20:14:29 EST r7n06 /home/hltcoe/rwicks/ParlAI  1057  kill 83686
+2020 Feb 08 Sat 20:14:31 EST r7n06 /exp/rwicks/ParlAI  1001  clear
+2020 Feb 08 Sat 20:14:39 EST r7n06 /home/hltcoe/rwicks/ParlAI  1058  nvidia-smi
+2020 Feb 08 Sat 20:14:51 EST r7n06 /home/hltcoe/rwicks/ParlAI  1059  head output.txt 
+2020 Feb 08 Sat 20:16:06 EST r7n06 /home/hltcoe/rwicks/ParlAI  1060  watch nvidia-smi
+2020 Feb 08 Sat 20:16:15 EST r7n06 /home/hltcoe/rwicks/ParlAI  1061  python
+2020 Feb 08 Sat 20:16:49 EST r7n06 /exp/rwicks/ParlAI   998  sh train.sh | tee output.txt
+2020 Feb 08 Sat 20:16:57 EST r7n06 /exp/rwicks/ParlAI   999  conda deactivate
+2020 Feb 08 Sat 20:17:15 EST r7n06 /exp/rwicks/ParlAI  1000  nvidia-smi
+2020 Feb 08 Sat 20:17:35 EST r7n06 /home/hltcoe/rwicks/ParlAI  1062  conda install -c conda-forge tensorboardx
+2020 Feb 08 Sat 20:17:35 EST r7n06 /home/hltcoe/rwicks/ParlAI  1062  conda install -c conda-forge tensorboardx
+2020 Feb 08 Sat 20:17:49 EST r7n06 /exp/rwicks/ParlAI  1006  cd ParlAI/
+2020 Feb 08 Sat 20:17:50 EST r7n06 /exp/rwicks/ParlAI  1007  ls
+2020 Feb 08 Sat 20:17:52 EST r7n06 /exp/rwicks/ParlAI  1008  rm output.txt 
+2020 Feb 08 Sat 20:17:58 EST r7n06 /exp/rwicks/ParlAI  1009  sh train.sh | tee outpu
+2020 Feb 08 Sat 20:18:05 EST r7n06 /home/hltcoe/rwicks/ParlAI  1063  cat train.sh 
+2020 Feb 08 Sat 20:18:44 EST r7n06 /home/hltcoe/rwicks/ParlAI  1064  python
+2020 Feb 08 Sat 20:18:45 EST r7n06 /home/hltcoe/rwicks/ParlAI  1065  ls
+2020 Feb 08 Sat 20:18:54 EST r7n06 /home/hltcoe/rwicks/ParlAI  1066  head outpu
+2020 Feb 08 Sat 20:18:56 EST r7n06 /home/hltcoe/rwicks/ParlAI  1067  head output.txt 
+2020 Feb 08 Sat 20:18:58 EST r7n06 /home/hltcoe/rwicks/ParlAI  1068  rm outpu
+2020 Feb 08 Sat 20:19:49 EST r7n06 /exp/rwicks/ParlAI  1010  sh train.sh | tee output.txt
+2020 Feb 08 Sat 20:19:53 EST r7n06 /exp/rwicks/ParlAI  1011  nvidia-smi
+2020 Feb 08 Sat 20:19:58 EST r7n06 /exp/rwicks/ParlAI  1012  kill 86514
+2020 Feb 08 Sat 20:20:00 EST r7n06 /home/hltcoe/rwicks/ParlAI  1069  conda install -c conda-forge tensorboardX
+2020 Feb 08 Sat 20:20:01 EST r7n06 /exp/rwicks/ParlAI  1013  kill 86515
+2020 Feb 08 Sat 20:20:02 EST r7n06 /exp/rwicks/ParlAI  1014  kill 86516
+2020 Feb 08 Sat 20:20:45 EST r7n06 /home/hltcoe/rwicks/ParlAI  1070  vim train.sh 
+2020 Feb 08 Sat 20:20:48 EST r7n06 /exp/rwicks/ParlAI  1015  ls
+2020 Feb 08 Sat 20:20:54 EST r7n06 /exp/rwicks/ParlAI  1016  sh train.sh | output.txt
+2020 Feb 08 Sat 20:22:42 EST r7n06 /exp/rwicks/ParlAI  1017  sh train.sh | tee output.txt
+2020 Feb 08 Sat 20:22:45 EST r7n06 /exp/rwicks/ParlAI  1018  nvidia-smi
+2020 Feb 08 Sat 20:22:51 EST r7n06 /exp/rwicks/ParlAI  1019  kill 87526
+2020 Feb 08 Sat 20:22:53 EST r7n06 /exp/rwicks/ParlAI  1020  kill 87527
+2020 Feb 08 Sat 20:22:54 EST r7n06 /exp/rwicks/ParlAI  1021  kill 87528
+2020 Feb 08 Sat 20:23:31 EST r7n06 /home/hltcoe/rwicks/ParlAI  1071  vim train.sh
+2020 Feb 08 Sat 20:26:18 EST r7n06 /exp/rwicks/ParlAI  1022  sh train.sh | tee output.txt 
+2020 Feb 08 Sat 20:26:18 EST r7n06 /home/hltcoe/rwicks/ParlAI  1072  watch nvidia-smi
+2020 Feb 08 Sat 20:28:19 EST r7n06 /home/hltcoe/rwicks/ParlAI  1073  vim train.sh 
+2020 Feb 08 Sat 20:29:21 EST test1 /home/hltcoe/rwicks/ParlAI  1000  cd ParlAI/
+2020 Feb 08 Sat 20:29:23 EST test1 /home/hltcoe/rwicks/ParlAI  1001  cd ParlAI/
+2020 Feb 08 Sat 20:29:30 EST test1 /home/hltcoe/rwicks/ParlAI  1001  ls
+2020 Feb 08 Sat 20:29:32 EST test1 /home/hltcoe/rwicks/ParlAI  1002  rm output.txt 
+2020 Feb 08 Sat 20:29:42 EST test1 /home/hltcoe/rwicks/ParlAI  1003  sh train.sh | tee output.txt
+2020 Feb 08 Sat 20:29:46 EST test1 /home/hltcoe/rwicks/ParlAI  1003  sh train.sh | tee output.txt
+2020 Feb 08 Sat 20:30:21 EST test1 /home/hltcoe/rwicks/ParlAI  1003  sh train.sh | tee output.txt
+2020 Feb 08 Sat 20:31:16 EST test1 /home/hltcoe/rwicks/ParlAI  1004  view output.txt
+2020 Feb 08 Sat 20:31:21 EST test1 /home/hltcoe/rwicks/ParlAI  1005  sh train.sh | tee output.txt 
+2020 Feb 08 Sat 20:31:36 EST test1 /home/hltcoe/rwicks/ParlAI  1006  view output.txt 
+2020 Feb 08 Sat 20:31:41 EST test1 /home/hltcoe/rwicks/ParlAI  1007  ls models/
+2020 Feb 08 Sat 20:31:48 EST test1 /home/hltcoe/rwicks/ParlAI  1008  sh train.sh | tee output.txt 
+2020 Feb 08 Sat 20:32:16 EST test1 /home/hltcoe/rwicks/ParlAI  1002  vim train.sh 
+2020 Feb 08 Sat 20:32:22 EST test1 /home/hltcoe/rwicks/ParlAI  1008  sh train.sh | tee output.txt 
+2020 Feb 08 Sat 20:32:37 EST test1 /home/hltcoe/rwicks/ParlAI  1008  sh train.sh | tee output.txt 
+2020 Feb 08 Sat 20:32:50 EST test1 /home/hltcoe/rwicks/ParlAI  1008  sh train.sh | tee output.txt 
+2020 Feb 08 Sat 20:33:08 EST test1 /home/hltcoe/rwicks/ParlAI  1008  sh train.sh | tee output.txt 
+2020 Feb 08 Sat 20:33:12 EST test1 /home/hltcoe/rwicks/ParlAI  1009  ls models/
+2020 Feb 08 Sat 20:33:14 EST test1 /home/hltcoe/rwicks/ParlAI  1010  ls logs
+2020 Feb 08 Sat 20:33:15 EST test1 /home/hltcoe/rwicks/ParlAI  1011  ls
+2020 Feb 08 Sat 20:33:19 EST test1 /home/hltcoe/rwicks/ParlAI  1012  nvidia-smi
+2020 Feb 08 Sat 20:33:25 EST test1 /home/hltcoe/rwicks/ParlAI  1002  vim train.sh 
+2020 Feb 08 Sat 20:33:57 EST r7n03 /home/hltcoe/rwicks/ParlAI   999  cd ParlAI/
+2020 Feb 08 Sat 20:33:59 EST r7n03 /home/hltcoe/rwicks/ParlAI  1000  tmux a
+2020 Feb 08 Sat 20:34:04 EST r7n03 /home/hltcoe/rwicks/ParlAI   998  nvidia-smi
+2020 Feb 08 Sat 20:34:05 EST r7n03 /home/hltcoe/rwicks/ParlAI   998  nvidia-smi
+2020 Feb 08 Sat 20:34:09 EST r7n03 /home/hltcoe/rwicks/ParlAI   998  nvidia-smi
+2020 Feb 08 Sat 20:34:11 EST r7n03 /home/hltcoe/rwicks/ParlAI   999  ls
+2020 Feb 08 Sat 20:34:46 EST r7n03 /home/hltcoe/rwicks/ParlAI   999  vim train.sh 
+2020 Feb 08 Sat 20:39:00 EST r7n03 /home/hltcoe/rwicks/ParlAI  1000  watch nvidia-smi
+2020 Feb 08 Sat 20:39:03 EST r7n03 /home/hltcoe/rwicks/ParlAI  1001  tail output.txt
+2020 Feb 08 Sat 20:39:30 EST r7n03 /home/hltcoe/rwicks/ParlAI  1002  view output.txt 
+2020 Feb 08 Sat 20:39:33 EST r7n03 /home/hltcoe/rwicks/ParlAI  1003  nvidia-smi
+2020 Feb 08 Sat 20:39:42 EST r7n03 /home/hltcoe/rwicks/ParlAI  1004  ls
+2020 Feb 08 Sat 20:39:52 EST r7n03 /home/hltcoe/rwicks/ParlAI  1005  vim train.sh 
+2020 Feb 08 Sat 20:40:01 EST r7n03 /home/hltcoe/rwicks/ParlAI  1006  kill 294071
+2020 Feb 08 Sat 20:40:05 EST r7n03 /home/hltcoe/rwicks/ParlAI  1007  kill 294090
+2020 Feb 08 Sat 20:40:09 EST r7n03 /home/hltcoe/rwicks/ParlAI  1008  kill 294091
+2020 Feb 08 Sat 20:40:13 EST r7n03 /home/hltcoe/rwicks/ParlAI  1009  nvidia-smi
+2020 Feb 08 Sat 20:40:13 EST r7n03 /home/hltcoe/rwicks/ParlAI  1000  sh train.sh | tee output.txt
+2020 Feb 08 Sat 20:40:13 EST r7n03 /home/hltcoe/rwicks/ParlAI  1000  sh train.sh | tee output.txt
+2020 Feb 08 Sat 20:40:19 EST r7n03 /home/hltcoe/rwicks/ParlAI  1001  rm output.txt 
+2020 Feb 08 Sat 20:43:15 EST r7n03 /home/hltcoe/rwicks/ParlAI  1010  watch nvidia-smi
+2020 Feb 08 Sat 20:43:18 EST r7n03 /home/hltcoe/rwicks/ParlAI  1011  head output.txt 
+2020 Feb 08 Sat 20:46:25 EST r7n03 /home/hltcoe/rwicks/ParlAI  1002  sh train.sh | tee output.txt
+2020 Feb 08 Sat 20:46:27 EST r7n03 /home/hltcoe/rwicks/ParlAI  1003  ls
+2020 Feb 08 Sat 20:50:50 EST r7n03 /home/hltcoe/rwicks/ParlAI  1004  vim train.sh 
+2020 Feb 08 Sat 20:50:53 EST r7n03 /home/hltcoe/rwicks/ParlAI  1005  qsub train.sh 
+2020 Feb 08 Sat 20:51:06 EST r7n03 /home/hltcoe/rwicks/ParlAI  1001  tmux new -s dialog
+2020 Feb 08 Sat 20:51:16 EST test1 /exp/rwicks/ParlAI   998  exit
+2020 Feb 08 Sat 20:51:19 EST test1 /exp/rwicks/ParlAI   999  ls
+2020 Feb 08 Sat 20:56:20 EST test1 /exp/rwicks/ParlAI  1000  tail parlai.o7903726 -f
+2020 Feb 08 Sat 20:56:22 EST test1 /exp/rwicks/ParlAI  1001  ls models/
+2020 Feb 08 Sat 20:56:36 EST test1 /exp/rwicks/ParlAI  1002  tail parlai.o7903726 
+2020 Feb 08 Sat 20:56:39 EST test1 /exp/rwicks/ParlAI  1003  tail parlai.e7903726 
+2020 Feb 08 Sat 20:59:07 EST test1 /home/hltcoe/rwicks/ParlAI  1003  watch qstat
+2020 Feb 08 Sat 20:59:08 EST test1 /home/hltcoe/rwicks/ParlAI  1004  qstat
+2020 Feb 08 Sat 20:59:11 EST test1 /exp/rwicks/ParlAI  1004  tail parlai.o7903726 
+2020 Feb 08 Sat 22:02:49 EST test1 /home/hltcoe/rwicks/ParlAI  1000  cd ParlAI/
+2020 Feb 08 Sat 22:05:16 EST test1 /home/hltcoe/rwicks/ParlAI  1001  ls
+2020 Feb 08 Sat 22:05:22 EST test1 /home/hltcoe/rwicks/ParlAI  1002  tail parlai.o7903726 
+2020 Feb 08 Sat 22:05:31 EST test1 /home/hltcoe/rwicks/ParlAI  1003  ls
+2020 Feb 08 Sat 22:05:37 EST test1 /home/hltcoe/rwicks/ParlAI  1004  ls models/
+2020 Feb 08 Sat 22:05:47 EST test1 /home/hltcoe/rwicks/ParlAI  1005  ls examples/
+2020 Feb 08 Sat 22:05:53 EST test1 /home/hltcoe/rwicks/ParlAI  1006  ls parlai
+2020 Feb 08 Sat 22:06:02 EST test1 /home/hltcoe/rwicks/ParlAI  1007  head parlai.o7903726 
+2020 Feb 08 Sat 22:06:19 EST test1 /home/hltcoe/rwicks/ParlAI  1008  head -20 parlai.o7903726 
+2020 Feb 08 Sat 23:31:45 EST test1 /home/hltcoe/rwicks/ParlAI  1001  cd ParlAI/
+2020 Feb 08 Sat 23:31:53 EST test1 /home/hltcoe/rwicks/ParlAI  1002  ls modesl
+2020 Feb 08 Sat 23:32:02 EST test1 /home/hltcoe/rwicks/ParlAI  1003  ls models/
+2020 Feb 08 Sat 23:32:06 EST test1 /home/hltcoe/rwicks/ParlAI  1004  ls
+2020 Feb 08 Sat 23:32:13 EST test1 /home/hltcoe/rwicks/ParlAI  1005  tail parlai.o7903726 
+2020 Feb 08 Sat 23:32:42 EST test1 /home/hltcoe/rwicks/ParlAI  1006  vim train.sh 
+2020 Feb 08 Sat 23:32:47 EST test1 /home/hltcoe/rwicks/ParlAI  1007  ls
+2020 Feb 08 Sat 23:34:59 EST test1 /home/hltcoe/rwicks/ParlAI  1008  vim train.sh
+2020 Feb 08 Sat 23:35:18 EST test1 /home/hltcoe/rwicks/ParlAI  1009  view parlai.o7903726 
+2020 Feb 08 Sat 23:35:34 EST test1 /home/hltcoe/rwicks/ParlAI  1010  vim train.sh 
+2020 Feb 08 Sat 23:36:09 EST test1 /home/hltcoe/rwicks/ParlAI  1011  view parlai.o7903726 
+2020 Feb 08 Sat 23:37:28 EST test1 /home/hltcoe/rwicks/ParlAI  1012  vim train.sh
+2020 Feb 08 Sat 23:37:31 EST test1 /home/hltcoe/rwicks/ParlAI  1013  qstat
+2020 Feb 08 Sat 23:38:32 EST r7n04 /home/hltcoe/rwicks/ParlAI  1000  cd ParlAI/
+2020 Feb 08 Sat 23:39:49 EST r7n04 /home/hltcoe/rwicks/ParlAI  1001  ls
+2020 Feb 08 Sat 23:40:08 EST r7n04 /home/hltcoe/rwicks/ParlAI  1002  vim train.sh 
+2020 Feb 08 Sat 23:40:17 EST r7n04 /home/hltcoe/rwicks/ParlAI   998  exit
+2020 Feb 08 Sat 23:41:17 EST r7n04 /home/hltcoe/rwicks/ParlAI   998  exit
+2020 Feb 08 Sat 23:41:25 EST r7n04 /home/hltcoe/rwicks/ParlAI   999  sh train.sh | tee output.txt
+2020 Feb 08 Sat 23:41:27 EST r7n04 /home/hltcoe/rwicks/ParlAI   999  ls
+2020 Feb 08 Sat 23:41:41 EST r7n04 /home/hltcoe/rwicks/ParlAI  1000  vim train.sh
+2020 Feb 08 Sat 23:41:59 EST r7n04 /home/hltcoe/rwicks/ParlAI  1001  head output.txt 
+2020 Feb 08 Sat 23:42:30 EST r7n04 /home/hltcoe/rwicks/ParlAI  1001  head output.txt 
+2020 Feb 08 Sat 23:42:47 EST r7n04 /home/hltcoe/rwicks/ParlAI   999  sh train.sh | tee output.txt
+2020 Feb 08 Sat 23:45:43 EST r7n04 /home/hltcoe/rwicks/ParlAI  1002  view output.txt 
+2020 Feb 08 Sat 23:46:14 EST r7n04 /home/hltcoe/rwicks/ParlAI  1003  vim train.sh 
+2020 Feb 08 Sat 23:47:30 EST r7n04 /home/hltcoe/rwicks/ParlAI  1004  view output.txt 
+2020 Feb 08 Sat 23:48:09 EST r7n04 /home/hltcoe/rwicks/ParlAI  1005  vim train.sh 
+2020 Feb 08 Sat 23:48:17 EST r7n04 /home/hltcoe/rwicks/ParlAI  1006  nvidia-smi
+2020 Feb 08 Sat 23:48:32 EST r7n04 /home/hltcoe/rwicks/ParlAI  1007  kill 104871
+2020 Feb 08 Sat 23:48:32 EST r7n04 /home/hltcoe/rwicks/ParlAI   999  sh train.sh | tee output.txt
+2020 Feb 08 Sat 23:48:40 EST r7n04 /home/hltcoe/rwicks/ParlAI  1008  kill 104910
+2020 Feb 08 Sat 23:48:46 EST r7n04 /home/hltcoe/rwicks/ParlAI  1009  kill 104911
+2020 Feb 08 Sat 23:48:50 EST r7n04 /home/hltcoe/rwicks/ParlAI  1010  kill 104912
+2020 Feb 08 Sat 23:49:13 EST r7n04 /home/hltcoe/rwicks/ParlAI  1011  vim train.sh 
+2020 Feb 08 Sat 23:49:14 EST r7n04 /home/hltcoe/rwicks/ParlAI   999  sh train.sh | tee output.txt
+2020 Feb 08 Sat 23:49:20 EST r7n04 /home/hltcoe/rwicks/ParlAI  1000  clear
+2020 Feb 08 Sat 23:49:36 EST r7n04 /home/hltcoe/rwicks/ParlAI  1001  sh train.sh 
+2020 Feb 08 Sat 23:49:46 EST r7n04 /home/hltcoe/rwicks/ParlAI  1012  clear
+2020 Feb 08 Sat 23:49:49 EST r7n04 /home/hltcoe/rwicks/ParlAI  1013  ls
+2020 Feb 08 Sat 23:50:13 EST r7n04 /home/hltcoe/rwicks/ParlAI  1002  sh train.sh | tee output.txt
+2020 Feb 08 Sat 23:51:18 EST r7n04 /home/hltcoe/rwicks/ParlAI  1003  view output.txt 
+2020 Feb 08 Sat 23:51:18 EST r7n04 /home/hltcoe/rwicks/ParlAI  1014  vim train.sh 
+2020 Feb 08 Sat 23:51:42 EST r7n04 /home/hltcoe/rwicks/ParlAI  1015  clear
+2020 Feb 08 Sat 23:52:28 EST r7n04 /home/hltcoe/rwicks/ParlAI  1016  view output.txt 
+2020 Feb 08 Sat 23:52:35 EST r7n04 /home/hltcoe/rwicks/ParlAI  1017  ls
+2020 Feb 08 Sat 23:52:40 EST r7n04 /home/hltcoe/rwicks/ParlAI  1018  ls models
+2020 Feb 08 Sat 23:54:32 EST r7n04 /home/hltcoe/rwicks/ParlAI  1018  ls models
+2020 Feb 08 Sat 23:56:14 EST r7n04 /home/hltcoe/rwicks/ParlAI  1018  ls models
+2020 Feb 08 Sat 23:56:58 EST r7n04 /home/hltcoe/rwicks/ParlAI  1018  ls models
+2020 Feb 08 Sat 23:57:29 EST r7n04 /home/hltcoe/rwicks/ParlAI  1018  ls models
+2020 Feb 08 Sat 23:57:35 EST r7n04 /home/hltcoe/rwicks/ParlAI  1018  ls models
+2020 Feb 08 Sat 23:58:20 EST r7n04 /home/hltcoe/rwicks/ParlAI  1018  ls models
+2020 Feb 08 Sat 23:58:41 EST r7n04 /home/hltcoe/rwicks/ParlAI  1003  tmux new -s dialog
+2020 Feb 08 Sat 23:58:44 EST r7n04 /home/hltcoe/rwicks/ParlAI  1003  tmux new -s dialog
+2020 Feb 08 Sat 23:58:55 EST r7n04 /home/hltcoe/rwicks/ParlAI  1004  sh train.sh | tee output.txt
+2020 Feb 08 Sat 23:58:56 EST test1 /home/hltcoe/rwicks/ParlAI  1014  qrsh -l h_rt=0:59:0,gpu=4 -q gpu_short.q
+2020 Feb 08 Sat 23:58:59 EST test1 /home/hltcoe/rwicks/ParlAI  1015  clear
+2020 Feb 08 Sat 23:59:04 EST test1 /home/hltcoe/rwicks/ParlAI  1016  qstat
+2020 Feb 08 Sat 23:59:09 EST test1 /home/hltcoe/rwicks/ParlAI  1017  qdel parlai
+2020 Feb 08 Sat 23:59:17 EST test1 /home/hltcoe/rwicks/ParlAI  1018  ls
+2020 Feb 08 Sat 23:59:24 EST test1 /home/hltcoe/rwicks/ParlAI  1019  tail parlai.o7903726 
+2020 Feb 08 Sat 23:59:55 EST test1 /home/hltcoe/rwicks/ParlAI  1020  vim train.sh
+2020 Feb 09 Sun 00:00:12 EST test1 /home/hltcoe/rwicks/ParlAI   999  cd ParlAI/
+2020 Feb 09 Sun 00:00:15 EST test1 /home/hltcoe/rwicks/ParlAI  1000  ls
+2020 Feb 09 Sun 00:00:20 EST test1 /home/hltcoe/rwicks/ParlAI  1001  qsub train.sh 
+2020 Feb 09 Sun 00:01:59 EST test1 /home/hltcoe/rwicks/ParlAI  1002  watch qstat
+2020 Feb 09 Sun 00:02:26 EST test1 /home/hltcoe/rwicks/ParlAI  1003  watch nvidia-smi
+2020 Feb 09 Sun 00:02:41 EST test1 /home/hltcoe/rwicks/ParlAI  1004  tail parlai.o7903739 
+2020 Feb 09 Sun 00:03:05 EST test1 /home/hltcoe/rwicks/ParlAI  1005  realpath .
+2020 Feb 09 Sun 00:03:24 EST test1 /home/hltcoe/rwicks/ParlAI  1006  tail parlai.o7903739 
+2020 Feb 09 Sun 00:07:28 EST test1 /home/hltcoe/rwicks/ParlAI  1006  tail parlai.o7903739 
+2020 Feb 09 Sun 00:08:10 EST test1 /home/hltcoe/rwicks/ParlAI  1007  qstat
+2020 Feb 09 Sun 00:08:38 EST test1 /home/hltcoe/rwicks/ParlAI  1008  ssh r3n01
+2020 Feb 09 Sun 00:08:42 EST test1 /home/hltcoe/rwicks/ParlAI  1009  ls
+2020 Feb 09 Sun 00:09:03 EST test1 /home/hltcoe/rwicks/ParlAI  1010  rm parlai.*7903726
+2020 Feb 09 Sun 00:09:04 EST test1 /home/hltcoe/rwicks/ParlAI  1011  ls
+2020 Feb 09 Sun 00:09:10 EST test1 /home/hltcoe/rwicks/ParlAI  1012  tail parlai.o7903739 
+2020 Feb 09 Sun 00:09:13 EST test1 /home/hltcoe/rwicks/ParlAI  1013  ls
+2020 Feb 09 Sun 00:09:22 EST test1 /home/hltcoe/rwicks/ParlAI  1014  qdel parlai
+2020 Feb 09 Sun 00:09:34 EST test1 /home/hltcoe/rwicks/ParlAI  1015  rm parlai.e*
+2020 Feb 09 Sun 00:09:39 EST test1 /home/hltcoe/rwicks/ParlAI  1016  rm parlai.o*
+2020 Feb 09 Sun 00:09:43 EST test1 /home/hltcoe/rwicks/ParlAI  1017  qsub train.sh
+2020 Feb 09 Sun 00:09:51 EST test1 /home/hltcoe/rwicks/ParlAI  1018  watch qstat
+2020 Feb 09 Sun 00:11:54 EST test1 /home/hltcoe/rwicks/ParlAI  1019  ls
+2020 Feb 09 Sun 00:12:02 EST test1 /home/hltcoe/rwicks/ParlAI  1020  tail parlai.o7903740 
+2020 Feb 09 Sun 00:13:54 EST test1 /home/hltcoe/rwicks/ParlAI  1020  tail parlai.o7903740 
+2020 Feb 09 Sun 00:14:02 EST test1 /home/hltcoe/rwicks/ParlAI  1021  qstat
+2020 Feb 09 Sun 00:14:20 EST test1 /home/hltcoe/rwicks/ParlAI  1022  ssh r3n04
+2020 Feb 09 Sun 00:16:21 EST test1 /home/hltcoe/rwicks/ParlAI  1023  tail parlai.o7903740 
+2020 Feb 09 Sun 00:22:10 EST test1 /home/hltcoe/rwicks/ParlAI  1023  tail parlai.o7903740 
+2020 Feb 09 Sun 00:23:31 EST test1 /home/hltcoe/rwicks/ParlAI  1023  tail parlai.o7903740 
+2020 Feb 09 Sun 00:23:36 EST test1 /home/hltcoe/rwicks/ParlAI  1024  qstat
+2020 Feb 09 Sun 00:23:50 EST test1 /home/hltcoe/rwicks/ParlAI  1025  ssh r3n04
+2020 Feb 09 Sun 00:29:42 EST test1 /home/hltcoe/rwicks/ParlAI  1026  tail parlai.o7903740 
+2020 Feb 09 Sun 00:59:11 EST test1 /home/hltcoe/rwicks/ParlAI   999  cd ParlAI/
+2020 Feb 09 Sun 00:59:23 EST test1 /home/hltcoe/rwicks/ParlAI  1000  view parlai.o7903740 
+2020 Feb 09 Sun 00:59:26 EST test1 /home/hltcoe/rwicks/ParlAI  1001  ls models
+2020 Feb 09 Sun 11:00:23 EST test1 /home/hltcoe/rwicks/ParlAI  1000  cd ParlAI/
+2020 Feb 09 Sun 11:00:27 EST test1 /home/hltcoe/rwicks/ParlAI  1001  ls
+2020 Feb 09 Sun 11:00:31 EST test1 /home/hltcoe/rwicks/ParlAI  1002  ls models/
+2020 Feb 09 Sun 11:00:36 EST test1 /home/hltcoe/rwicks/ParlAI  1003  ls -la models/
+2020 Feb 09 Sun 11:01:04 EST test1 /home/hltcoe/rwicks/ParlAI  1004  tail parlai.o7903740 
+2020 Feb 09 Sun 11:01:16 EST test1 /home/hltcoe/rwicks/ParlAI  1005  qstat
+2020 Feb 09 Sun 11:03:00 EST test1 /home/hltcoe/rwicks/ParlAI  1006  ssh r3n04
+2020 Feb 09 Sun 11:04:45 EST test1 /home/hltcoe/rwicks/ParlAI  1007  ls
+2020 Feb 09 Sun 11:04:48 EST test1 /home/hltcoe/rwicks/ParlAI  1008  ls -la
+2020 Feb 09 Sun 11:05:55 EST test1 /home/hltcoe/rwicks/ParlAI  1009  view parlai.o7903740 
+2020 Feb 09 Sun 11:06:01 EST test1 /home/hltcoe/rwicks/ParlAI  1010  ls
+2020 Feb 09 Sun 11:06:10 EST test1 /home/hltcoe/rwicks/ParlAI  1011  cp train.sh train-single.sh
+2020 Feb 09 Sun 11:06:21 EST test1 /home/hltcoe/rwicks/ParlAI  1012  mkdir single-model
+2020 Feb 09 Sun 11:06:36 EST test1 /home/hltcoe/rwicks/ParlAI  1013  vim trian-single.sh
+2020 Feb 09 Sun 11:08:19 EST test1 /home/hltcoe/rwicks/ParlAI  1014  vim train-single.sh 
+2020 Feb 09 Sun 11:08:41 EST test1 /home/hltcoe/rwicks/ParlAI  1014  vim train-single.sh 
+2020 Feb 09 Sun 11:10:07 EST r7n05 /home/hltcoe/rwicks/ParlAI   998  cd ParlAI/
+2020 Feb 09 Sun 11:25:28 EST r7n05 /home/hltcoe/rwicks/ParlAI   999  sh train-single.sh 
+2020 Feb 09 Sun 11:25:36 EST r7n05 /home/hltcoe/rwicks/ParlAI  1000  qsub train-single.sh 
+2020 Feb 09 Sun 11:25:41 EST r7n05 /home/hltcoe/rwicks/ParlAI  1001  qstat
+2020 Feb 09 Sun 11:25:46 EST r7n05 /home/hltcoe/rwicks/ParlAI  1002  ls
+2020 Feb 09 Sun 11:25:54 EST r7n05 /home/hltcoe/rwicks/ParlAI  1003  ls -la models/
+2020 Feb 09 Sun 11:26:04 EST r7n05 /home/hltcoe/rwicks/ParlAI  1004  ls -la parlai.o7903740 
+2020 Feb 09 Sun 11:26:11 EST r7n05 /home/hltcoe/rwicks/ParlAI  1005  TMUX A
+2020 Feb 09 Sun 11:26:16 EST r7n05 /home/hltcoe/rwicks/ParlAI  1006  tmux a
+2020 Feb 09 Sun 11:26:24 EST r7n05 /home/hltcoe/rwicks/ParlAI   997  exit
+2020 Feb 09 Sun 11:26:27 EST r7n05 /home/hltcoe/rwicks/ParlAI   997  exit
+2020 Feb 09 Sun 11:26:31 EST r7n05 /home/hltcoe/rwicks/ParlAI   998  ls
+2020 Feb 09 Sun 11:28:28 EST r7n05 /home/hltcoe/rwicks/ParlAI   999  sh train.sh 
+2020 Feb 09 Sun 11:29:49 EST r7n05 /home/hltcoe/rwicks/ParlAI  1000  vim train.sh
+2020 Feb 09 Sun 11:31:34 EST r7n05 /home/hltcoe/rwicks/ParlAI  1001  sh train.sh
+2020 Feb 09 Sun 11:31:45 EST r7n05 /home/hltcoe/rwicks/ParlAI  1002  ls
+2020 Feb 09 Sun 11:31:48 EST r7n05 /home/hltcoe/rwicks/ParlAI  1003  ls models
+2020 Feb 09 Sun 11:32:19 EST r7n05 /home/hltcoe/rwicks/ParlAI  1004  vim train.sh
+2020 Feb 09 Sun 11:38:09 EST r7n05 /home/hltcoe/rwicks/ParlAI  1005  sh train.sh
+2020 Feb 09 Sun 11:39:04 EST r7n05 /home/hltcoe/rwicks/ParlAI  1006  ls
+2020 Feb 09 Sun 11:40:30 EST r7n05 /home/hltcoe/rwicks/ParlAI  1007  df -H | grep rwicks
+2020 Feb 09 Sun 11:41:45 EST r7n05 /home/hltcoe/rwicks/ParlAI  1008  ls -la models
+2020 Feb 09 Sun 11:42:11 EST r7n05 /home/hltcoe/rwicks/ParlAI  1009  ls -la
+2020 Feb 09 Sun 11:45:41 EST r7n05 /home/hltcoe/rwicks/ParlAI  1012  cd ..
+2020 Feb 09 Sun 11:45:56 EST r7n05 /home/hltcoe/rwicks/ParlAI  1013  cp -r models ~/
+2020 Feb 09 Sun 11:46:06 EST r7n05 /home/hltcoe/rwicks/ParlAI  1014  qstat
+2020 Feb 09 Sun 11:46:11 EST r7n05 /home/hltcoe/rwicks/ParlAI  1015  qdel parlai
+2020 Feb 09 Sun 11:46:22 EST r7n05 /home/hltcoe/rwicks/ParlAI  1007  tmux new -s dialog
+2020 Feb 09 Sun 11:46:33 EST r7n05 /home/hltcoe/rwicks/ParlAI  1008  ssh r3n04
+2020 Feb 09 Sun 11:46:40 EST r7n05 /home/hltcoe/rwicks/ParlAI  1009  ls
+2020 Feb 09 Sun 11:46:44 EST r7n05 /home/hltcoe/rwicks/ParlAI  1010  qsub train.sh
+2020 Feb 09 Sun 11:47:02 EST test1 /home/hltcoe/rwicks/ParlAI  1015  qrsh -l h_rt=0:59:0,gpu=1 -q gpu_short.q
+2020 Feb 09 Sun 11:47:07 EST test1 /home/hltcoe/rwicks/ParlAI  1016  qstat
+2020 Feb 09 Sun 11:47:47 EST test1 /home/hltcoe/rwicks/ParlAI  1021  cd ParlAI/
+2020 Feb 09 Sun 11:47:49 EST test1 /home/hltcoe/rwicks/ParlAI  1022  ls
+2020 Feb 09 Sun 11:49:23 EST test1 /home/hltcoe/rwicks/ParlAI  1023  chmod 777 -R *
+2020 Feb 09 Sun 11:49:30 EST test1 /home/hltcoe/rwicks/ParlAI  1024  ls
+2020 Feb 09 Sun 11:49:43 EST test1 /home/hltcoe/rwicks/ParlAI  1025  tail parlai.o7903763 
+2020 Feb 09 Sun 11:52:29 EST test1 /home/hltcoe/rwicks/ParlAI  1025  tail parlai.o7903763 
+2020 Feb 09 Sun 11:53:51 EST test1 /home/hltcoe/rwicks/ParlAI  1026  qstat
+2020 Feb 09 Sun 11:53:55 EST test1 /home/hltcoe/rwicks/ParlAI  1027  tail parlai.o7903763 
+2020 Feb 09 Sun 12:01:11 EST test1 /home/hltcoe/rwicks/ParlAI  1028  tail parlai.o7903763 -f
+2020 Feb 09 Sun 12:01:17 EST test1 /home/hltcoe/rwicks/ParlAI  1029  qstat
+2020 Feb 09 Sun 12:01:40 EST test1 /home/hltcoe/rwicks/ParlAI  1030  ssh r3n07
+2020 Feb 09 Sun 12:01:44 EST test1 /home/hltcoe/rwicks/ParlAI  1031  ls
+2020 Feb 09 Sun 12:01:51 EST test1 /home/hltcoe/rwicks/ParlAI  1032  qstat
+2020 Feb 09 Sun 12:01:53 EST test1 /home/hltcoe/rwicks/ParlAI  1032  qstat
+2020 Feb 09 Sun 12:02:01 EST test1 /home/hltcoe/rwicks/ParlAI  1033  tail -f parlai.o7903763 
+2020 Feb 09 Sun 12:02:19 EST test1 /home/hltcoe/rwicks/ParlAI  1034  tail -f parlai.e7903763 
+2020 Feb 09 Sun 12:15:22 EST test1 /home/hltcoe/rwicks/ParlAI  1035  tail -f parlai.o7903763 
+2020 Feb 09 Sun 12:45:46 EST test1 /home/hltcoe/rwicks/ParlAI  1036  ls
+2020 Feb 09 Sun 12:46:27 EST test1 /home/hltcoe/rwicks/ParlAI  1037  tail -f parlai.o7903763 
+2020 Feb 09 Sun 12:46:32 EST test1 /home/hltcoe/rwicks/ParlAI  1038  qstat
+2020 Feb 09 Sun 13:09:58 EST r3n07 /home/hltcoe/rwicks/ParlAI  1000  cd ParlAI/
+2020 Feb 09 Sun 13:20:57 EST r3n07 /home/hltcoe/rwicks/ParlAI  1001  nvidia-smi
+2020 Feb 09 Sun 13:21:07 EST r3n07 /home/hltcoe/rwicks/ParlAI  1002  tail parlai.o7903763 
+2020 Feb 09 Sun 13:36:55 EST r3n07 /home/hltcoe/rwicks/ParlAI  1002  tail parlai.o7903763 
+2020 Feb 09 Sun 13:37:01 EST r3n07 /home/hltcoe/rwicks/ParlAI  1003  nvidia-smi
+2020 Feb 09 Sun 16:51:35 EST test1 /home/hltcoe/rwicks/ParlAI   999  cd ParlAI/
+2020 Feb 09 Sun 16:51:48 EST test1 /home/hltcoe/rwicks/ParlAI  1000  tail parlai.o7903763 
+2020 Feb 09 Sun 16:52:11 EST test1 /home/hltcoe/rwicks/ParlAI  1001  ls
+2020 Feb 09 Sun 16:52:15 EST test1 /home/hltcoe/rwicks/ParlAI  1002  qstat
+2020 Feb 09 Sun 19:59:47 EST test1 /home/hltcoe/rwicks/ParlAI   998  cd ParlAI/
+2020 Feb 09 Sun 19:59:48 EST test1 /home/hltcoe/rwicks/ParlAI   999  ls
+2020 Feb 09 Sun 19:59:54 EST test1 /home/hltcoe/rwicks/ParlAI  1000  tail parlai.o7903763 
+2020 Feb 09 Sun 20:02:05 EST test1 /home/hltcoe/rwicks/ParlAI  1001  qstat
+2020 Feb 09 Sun 20:35:22 EST r3n07 /home/hltcoe/rwicks/ParlAI  1003  cd ParlAI/
+2020 Feb 09 Sun 20:35:24 EST r3n07 /home/hltcoe/rwicks/ParlAI  1004  ls
+2020 Feb 09 Sun 20:35:35 EST r3n07 /home/hltcoe/rwicks/ParlAI  1005  conda activate py3
+2020 Feb 09 Sun 20:36:07 EST r3n07 /home/hltcoe/rwicks/ParlAI  1006  python interactive.py -m seq2seq -t twitter -mf models/HW2_model2.checkpoint
+2020 Feb 09 Sun 20:36:25 EST r3n07 /home/hltcoe/rwicks/ParlAI  1007  python examples/interactive.py -m seq2seq -t twitter -mf models/HW2_model2.checkpoint
+2020 Feb 09 Sun 20:36:37 EST r3n07 /home/hltcoe/rwicks/ParlAI  1008  python examples/interactive.py -m seq2seq -t twitter -mf models/multi-gpu.checkpoint
+2020 Feb 09 Sun 20:36:53 EST r3n07 /home/hltcoe/rwicks/ParlAI  1009  ls models
+2020 Feb 09 Sun 20:42:44 EST r3n07 /home/hltcoe/rwicks/ParlAI  1010  python examples/interactive.py -m seq2seq -t twitter -mf models/multi-gpu.model.checkpoint
+2020 Feb 09 Sun 21:48:56 EST test1 /home/hltcoe/rwicks/ParlAI   998  cd ParlAI/
+2020 Feb 09 Sun 21:48:59 EST test1 /home/hltcoe/rwicks/ParlAI   999  python examples/interactive.py -m seq2seq -t twitter -mf models/multi-gpu.model.checkpoint
+2020 Feb 09 Sun 21:49:07 EST test1 /home/hltcoe/rwicks/ParlAI  1000  ls
+2020 Feb 09 Sun 21:49:59 EST test1 /home/hltcoe/rwicks/ParlAI  1005  cd ..
+2020 Feb 09 Sun 21:50:05 EST test1 /home/hltcoe/rwicks/ParlAI  1006  conda activate py3
+2020 Feb 09 Sun 21:51:51 EST test1 /home/hltcoe/rwicks/ParlAI  1007  python examples/interactive.py -m seq2seq -t twitter -mf models/multi-gpu.model.checkpoint
+2020 Feb 09 Sun 21:53:54 EST test1 /home/hltcoe/rwicks/ParlAI  1008  python examples/interactive.py -m seq2seq -mf models/multi-gpu.model.checkpoint
+2020 Feb 09 Sun 21:54:05 EST test1 /home/hltcoe/rwicks/ParlAI  1009  ls -la models/
+2020 Feb 09 Sun 21:55:42 EST test1 /home/hltcoe/rwicks/ParlAI  1010  python examples/interactive.py -m seq2seq -mf single-model/single.model.checkpoint
+2020 Feb 09 Sun 22:49:13 EST test1 /home/hltcoe/rwicks/ParlAI  1004  cd ParlAI/
+2020 Feb 09 Sun 22:49:21 EST test1 /home/hltcoe/rwicks/ParlAI  1005  ls -la
+2020 Feb 09 Sun 22:49:40 EST test1 /home/hltcoe/rwicks/ParlAI  1006  ls -la models/
+2020 Feb 09 Sun 22:50:04 EST test1 /home/hltcoe/rwicks/ParlAI  1007  tail parlai.o7903763 
+2020 Feb 09 Sun 23:59:11 EST test1 /home/hltcoe/rwicks/ParlAI  1008  ssh external
+2020 Feb 09 Sun 23:59:13 EST test1 /home/hltcoe/rwicks/ParlAI  1009  ls
+2020 Feb 09 Sun 23:59:19 EST test1 /home/hltcoe/rwicks/ParlAI  1010  tail parlai.o7903763 
+2020 Feb 09 Sun 23:59:27 EST test1 /home/hltcoe/rwicks/ParlAI  1011  qstat
+2020 Feb 09 Sun 23:59:42 EST test1 /home/hltcoe/rwicks/ParlAI  1012  ssh r3n07
+2020 Feb 10 Mon 10:34:56 EST test1 /home/hltcoe/rwicks/ParlAI   999  cd ParlAI/
+2020 Feb 10 Mon 10:34:57 EST test1 /home/hltcoe/rwicks/ParlAI  1000  qstat
+2020 Feb 10 Mon 10:37:17 EST test1 /home/hltcoe/rwicks/ParlAI  1001  ls
+2020 Feb 10 Mon 10:37:27 EST test1 /home/hltcoe/rwicks/ParlAI  1002  tail parlai.o7903763 
+2020 Feb 10 Mon 10:41:53 EST test1 /home/hltcoe/rwicks/ParlAI  1003  python3 interactive.py -m seq2seq -mf models/multi-gpu.model.checkpoint
+2020 Feb 10 Mon 10:41:56 EST test1 /home/hltcoe/rwicks/ParlAI  1004  conda activate py3
+2020 Feb 10 Mon 10:42:07 EST test1 /home/hltcoe/rwicks/ParlAI  1005  python models/interactive.py -m seq2seq -mf models/multi-gpu.model.checkpoint
+2020 Feb 10 Mon 10:42:59 EST test1 /home/hltcoe/rwicks/ParlAI  1006  python examples/interactive.py -m seq2seq -mf models/multi-gpu.model.checkpoint
+2020 Feb 10 Mon 10:43:05 EST test1 /home/hltcoe/rwicks/ParlAI  1007  ls single-model/
+2020 Feb 10 Mon 10:45:18 EST test1 /home/hltcoe/rwicks/ParlAI  1008  python examples/interactive.py -m seq2seq -mf single-model/single.model
+2020 Feb 10 Mon 10:45:20 EST test1 /home/hltcoe/rwicks/ParlAI  1009  ls
+2020 Feb 10 Mon 10:45:22 EST test1 /home/hltcoe/rwicks/ParlAI  1010  ls models/
+2020 Feb 10 Mon 10:45:38 EST test1 /home/hltcoe/rwicks/ParlAI  1012  cd ParlAI/
+2020 Feb 10 Mon 10:45:38 EST test1 /home/hltcoe/rwicks/ParlAI  1013  ls
+2020 Feb 10 Mon 10:46:29 EST test1 /home/hltcoe/rwicks/ParlAI  1014  vim train-single.sh 
+2020 Feb 10 Mon 10:47:35 EST test1 /home/hltcoe/rwicks/ParlAI  1015  python examples/interactive.py  -mf single-model/single.model
+2020 Feb 10 Mon 10:48:42 EST test1 /home/hltcoe/rwicks/ParlAI  1016  vim train-single.sh 
+2020 Feb 10 Mon 10:49:10 EST test1 /home/hltcoe/rwicks/ParlAI  1017  ls
+2020 Feb 10 Mon 10:50:14 EST test1 /home/hltcoe/rwicks/ParlAI  1018  python -m parlai.scripts.interactive -mf models/multi-gpu.model
+2020 Feb 10 Mon 10:50:20 EST test1 /home/hltcoe/rwicks/ParlAI  1019  python -m parlai.scripts.interactive -mf models/multi-gpu.model.opt 
+2020 Feb 10 Mon 10:50:33 EST test1 /home/hltcoe/rwicks/ParlAI  1020  head models/multi-gpu.model.checkpoint.opt 
+2020 Feb 10 Mon 10:51:07 EST test1 /home/hltcoe/rwicks/ParlAI  1021  python -m parlai.scripts.interactive -mf models/multi-gpu.model.opt -m seq2seq
+2020 Feb 10 Mon 10:51:55 EST test1 /home/hltcoe/rwicks/ParlAI  1022  python -m parlai.scripts.interactive -mf models/multi-gpu.model -m seq2seq
+2020 Feb 10 Mon 10:52:28 EST test1 /home/hltcoe/rwicks/ParlAI  1023  python -m parlai.scripts.interactive -mf models/multi-gpu.model.checkpoint -m seq2seq
+2020 Feb 10 Mon 10:53:20 EST test1 /home/hltcoe/rwicks/ParlAI  1031  cd ParlAI/
+2020 Feb 10 Mon 10:53:22 EST test1 /home/hltcoe/rwicks/ParlAI  1032  ls
+2020 Feb 10 Mon 11:23:13 EST test1 /home/hltcoe/rwicks/ParlAI  1052  cd ~/ParlAI/
+2020 Feb 10 Mon 11:23:29 EST test1 /home/hltcoe/rwicks/ParlAI  1053  vim README
+2020 Feb 10 Mon 11:23:35 EST test1 /home/hltcoe/rwicks/ParlAI  1054  vim train.sh
+2020 Feb 10 Mon 11:23:41 EST test1 /home/hltcoe/rwicks/ParlAI  1055  vim README
+2020 Feb 10 Mon 11:23:50 EST test1 /home/hltcoe/rwicks/ParlAI  1056  vim train-single.sh 
+2020 Feb 10 Mon 11:24:50 EST test1 /home/hltcoe/rwicks/ParlAI  1057  vim README
+2020 Feb 10 Mon 11:25:25 EST test1 /home/hltcoe/rwicks/ParlAI  1057  vim README
+2020 Feb 10 Mon 11:26:20 EST test1 /home/hltcoe/rwicks/ParlAI  1058  git add -A
+2020 Feb 10 Mon 11:26:32 EST test1 /home/hltcoe/rwicks/ParlAI  1059  git add *.json *.sh README
+2020 Feb 10 Mon 11:26:46 EST test1 /home/hltcoe/rwicks/ParlAI  1060  git commit -m "models trained, submission"
+2020 Feb 10 Mon 11:26:56 EST test1 /home/hltcoe/rwicks/ParlAI  1061  mkdir chat_logs
+2020 Feb 10 Mon 11:27:02 EST test1 /home/hltcoe/rwicks/ParlAI  1062  mv *.json chat_logs/
+2020 Feb 10 Mon 11:27:04 EST test1 /home/hltcoe/rwicks/ParlAI  1063  ls
+2020 Feb 10 Mon 11:27:14 EST test1 /home/hltcoe/rwicks/ParlAI  1064  git add chat_logs/
+2020 Feb 10 Mon 11:28:12 EST test1 /home/hltcoe/rwicks/ParlAI  1065  vim README
+2020 Feb 10 Mon 11:28:17 EST test1 /home/hltcoe/rwicks/ParlAI  1066  git add README
+2020 Feb 10 Mon 11:28:29 EST test1 /home/hltcoe/rwicks/ParlAI  1067  git commit -m "updated readme; added subdirectory"
+2020 Feb 10 Mon 11:28:40 EST test1 /home/hltcoe/rwicks/ParlAI  1068  git push
+2020 Feb 10 Mon 11:29:38 EST test1 /home/hltcoe/rwicks/ParlAI  1069  git branch submission
+2020 Feb 10 Mon 11:29:47 EST test1 /home/hltcoe/rwicks/ParlAI  1070  git checkout submission
+2020 Feb 10 Mon 11:29:51 EST test1 /home/hltcoe/rwicks/ParlAI  1071  ls
+2020 Feb 10 Mon 11:30:04 EST test1 /home/hltcoe/rwicks/ParlAI  1072  cp chat_logs/ ~/
+2020 Feb 10 Mon 11:30:06 EST test1 /home/hltcoe/rwicks/ParlAI  1073  cp chat_logs/ ~/ -r
+2020 Feb 10 Mon 11:30:19 EST test1 /home/hltcoe/rwicks/ParlAI  1074  mkdir ~/parlai
+2020 Feb 10 Mon 11:30:28 EST test1 /home/hltcoe/rwicks/ParlAI  1075  mv *.sh ~/parlai/
+2020 Feb 10 Mon 11:30:33 EST test1 /home/hltcoe/rwicks/ParlAI  1076  mv README ~/parlai/
+2020 Feb 10 Mon 11:30:37 EST test1 /home/hltcoe/rwicks/ParlAI  1077  ls
+2020 Feb 10 Mon 11:30:51 EST test1 /home/hltcoe/rwicks/ParlAI  1078  mv parlai.* ~/parlai/
+2020 Feb 10 Mon 11:30:53 EST test1 /home/hltcoe/rwicks/ParlAI  1079  ls
+2020 Feb 10 Mon 11:31:38 EST test1 /home/hltcoe/rwicks/ParlAI  1080  mv single-* ~/parlai/
+2020 Feb 10 Mon 11:31:40 EST test1 /home/hltcoe/rwicks/ParlAI  1081  qstat
+2020 Feb 10 Mon 11:31:42 EST test1 /home/hltcoe/rwicks/ParlAI  1082  qdel parlai
+2020 Feb 10 Mon 11:31:44 EST test1 /home/hltcoe/rwicks/ParlAI  1083  ls
+2020 Feb 10 Mon 11:31:54 EST test1 /home/hltcoe/rwicks/ParlAI  1084  cp -r models/ ~/
+2020 Feb 10 Mon 11:32:08 EST test1 /home/hltcoe/rwicks/ParlAI  1085  mkdir ~/saved-models
+2020 Feb 10 Mon 11:32:28 EST test1 /home/hltcoe/rwicks/ParlAI  1086  cp -r models/ ~/saved-models/
+2020 Feb 10 Mon 11:32:46 EST test1 /home/hltcoe/rwicks/ParlAI  1087  ls
+2020 Feb 10 Mon 11:33:15 EST test1 /home/hltcoe/rwicks/ParlAI  1088  rm -r *
+2020 Feb 10 Mon 11:33:23 EST test1 /home/hltcoe/rwicks/ParlAI  1089  ls
+2020 Feb 10 Mon 11:34:36 EST test1 /home/hltcoe/rwicks/ParlAI  1100  cd ParlAI/
+2020 Feb 10 Mon 11:34:45 EST test1 /home/hltcoe/rwicks/ParlAI  1103  cd ParlAI/
+2020 Feb 10 Mon 11:34:46 EST test1 /home/hltcoe/rwicks/ParlAI  1104  ls
+2020 Feb 10 Mon 11:35:28 EST test1 /home/hltcoe/rwicks/ParlAI  1107  cd ..
+2020 Feb 10 Mon 11:35:29 EST test1 /home/hltcoe/rwicks/ParlAI  1108  ls
+2020 Feb 10 Mon 11:36:55 EST test1 /home/hltcoe/rwicks/ParlAI  1109  vim README 
+2020 Feb 10 Mon 11:37:16 EST test1 /home/hltcoe/rwicks/ParlAI  1109  vim README 
+2020 Feb 10 Mon 11:37:29 EST test1 /home/hltcoe/rwicks/ParlAI  1109  vim README 

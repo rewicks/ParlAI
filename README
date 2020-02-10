@@ -1,4 +1,7 @@
-Command used to train multi-gpu:
+TEAM: Rachel Wicks, Carlos Alejandro Aguirre Pocasangre, Nathaniel Weir
+
+
+Command used to train multi-gpu (train.sh)
 
 python -m parlai.scripts.multiprocessing_train \
         -bs 10 \
@@ -19,7 +22,7 @@ python -m parlai.scripts.multiprocessing_train \
         -sval True
 
 
-Command used to train single-gpu/no multi-processing model:
+Command used to train single-gpu/no multi-processing model (train-single.sh):
 python -m parlai.scripts.train_model \
         -bs 10 \
         -t twitter \
@@ -36,3 +39,5 @@ python -m parlai.scripts.train_model \
         -sval True
 
 Both resulted in very similar outputs. Our model is saved in the chat*.json while the PARLAI pretrained model is zoo-chat*.json. The single-gpu was allowed to train until the max time (roughly 20 hours) while the multi-gpu was cut off around 25 hours.
+
+The outputs for each model are the [single-]parlai.[e,o]*.
