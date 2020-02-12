@@ -4,7 +4,7 @@
 # This source code is licensed under the MIT license found in the
 # LICENSE file in the root directory of this source tree.
 
-from parlai.core.torch_generator_agent import TorchGeneratorAgent
+from parlai.core.torch_context_agent import TorchContextAgent
 from parlai.utils.misc import warn_once
 from .modules import HRED, opt_to_kwargs
 
@@ -12,7 +12,7 @@ import torch
 import torch.nn as nn
 
 
-class HREDAgent(TorchGeneratorAgent):
+class HREDAgent(TorchContextAgent):
     """
     Agent which takes an input sequence and previous utterances and produces an output sequence.
     """
