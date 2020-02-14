@@ -29,7 +29,7 @@ class MovieTripleTeacher(FixedDialogTeacher):
 	def num_examples(self):
 		return self.num_exs
 
-	def _setup_data(self, fold):
+	def _setup_data_pkl(self, fold):
 		self.data = []
 		dict_fpath = os.path.join(self.opt['datapath'], 'movietriples',  'train.dict.pkl')
 		with open(dict_fpath,'rb') as fp:
@@ -53,7 +53,16 @@ class MovieTripleTeacher(FixedDialogTeacher):
 						else:
 							u+= (' ' + word)
 				self.data.append(utterances)
+		import pdb;pdb.set_trace()
 
+	def _setup_data(self, fold):
+		self.data = []
+		fpath = os.path.join(self.opt['datapath'], 'movietriples', fold + '.txt')
+		with open(fpath, 'r') as fp:
+			data = fp.readlines()
+			for d in data:
+				utterances = d.strip().split('\t')
+				self.data.append(utterances)
 
 
 	def get(self, episode_idx, entry_idx=0):
@@ -65,7 +74,6 @@ class MovieTripleTeacher(FixedDialogTeacher):
 		my_turn = entries[1 + speaker_id + 2 * entry_idx]
 
 		episode_done = 2 * entry_idx + speaker_id + 1 >= len(full_eps) - 1
-		import pdb;pdb.set_trace()
 		action = {
 			'text': their_turn,
 			'episode_done': episode_done,
