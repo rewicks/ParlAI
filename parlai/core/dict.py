@@ -111,6 +111,8 @@ class DictionaryAgent(Agent):
     default_start = '__start__'
     default_end = '__end__'
     default_unk = '__unk__'
+    placeholders = ['<person>', '<number>','<continued_utterance>']
+
     default_tok = 're'
     default_lower = False
     default_textfields = 'text,labels'
@@ -183,6 +185,13 @@ class DictionaryAgent(Agent):
             help='token for end of sentence markers, if needed',
         )
         dictionary.add_argument(
+            '--dict-placeholders',
+            default=DictionaryAgent.placeholders,
+            type=list,
+            hidden=True,
+            help='tokens for placeholders (e.g. <person>) -- nweir',
+        )
+        dictionary.add_argument(
             '--dict-unktoken',
             default=DictionaryAgent.default_unk,
             hidden=True,
@@ -230,6 +239,7 @@ class DictionaryAgent(Agent):
         self.end_token = opt.get('dict_endtoken', DictionaryAgent.default_end)
         self.unk_token = opt.get('dict_unktoken', DictionaryAgent.default_unk)
         self.start_token = opt.get('dict_starttoken', DictionaryAgent.default_start)
+        self.placeholders = opt.get('placeholders', DictionaryAgent.placeholders)
         self.max_ngram_size = opt.get(
             'dict_max_ngram_size', DictionaryAgent.default_maxngram
         )
@@ -270,6 +280,10 @@ class DictionaryAgent(Agent):
             if self.unk_token:
                 # set special unknown word token
                 self.add_token(self.unk_token)
+            if self.placeholders:
+                for p in self.placeholders:
+                    self.add_token(p)
+
 
             loaded = False
             # If data built via pytorch data teacher, we need to load prebuilt dict
@@ -738,7 +752,14 @@ class DictionaryAgent(Agent):
             ``list``, ``tuple``, ``set``, or ``np.ndarray``.
         """
         if vec_type == list or vec_type == tuple or vec_type == set:
-            res = vec_type((self[token] for token in self.tokenize(str(text))))
+            for p in self.placeholders:
+                text=text.replace(p,p[1:-1].upper())
+            tokens = self.tokenize(str(text))
+            placeholders_in_tokens= [p[1:-1].upper() for p in self.placeholders]
+            for i,t in enumerate(tokens):
+                if t in placeholders_in_tokens:
+                    tokens[i] = '<' + t.lower() + '>'
+            res = vec_type((self[token] for token in tokens))
         elif vec_type == np.ndarray:
             res = np.fromiter((self[token] for token in self.tokenize(text)), np.int)
         else:

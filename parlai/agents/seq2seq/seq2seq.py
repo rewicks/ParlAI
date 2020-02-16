@@ -155,6 +155,7 @@ class Seq2seqAgent(TorchGeneratorAgent):
         """
         Set up model.
         """
+        opt.histsz = 2
         super().__init__(opt, shared)
         self.id = 'Seq2Seq'
 

@@ -2,21 +2,22 @@
 #$ -q gpu.q@@2080
 #$ -N single-parlai
 #$ -cwd
-source ~/.bashrc
-
-conda deactivate
-conda activate py3
+#source ~/.bashrc
+#
+#conda deactivate
+#conda activate py3
 
 pwd
 echo $(python --version)
+TASK=movietriples
 
-python -m parlai.scripts.build_dict -t twitter --dict-file single-model/single.model.dict
+#python -m parlai.scripts.build_dict -t twitter --dict-file single-model/single.model.dict
 
 python -m parlai.scripts.train_model \
-        -bs 10 \
-        -t twitter \
+        -bs 2 \
+        -t ${TASK} \
         -m seq2seq/seq2seq \
-        -mf single-model/single.model \
+        -mf debug/dd.model \
         --embedding-type fasttext_cc \
         --numlayers 2 \
         --embeddingsize 300 \

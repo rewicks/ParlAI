@@ -71,10 +71,10 @@ class HRED(TorchGeneratorModel):
         embeddingsize,
         hiddensize,
         sess_hsize,
-        numlayers=2,
+        numlayers=1,
         dropout=0,
         bidirectional=False,
-        rnn_class='lstm',
+        rnn_class='gru',
         lookuptable='unique',
         decoder='same',
         numsoftmax=1,
@@ -85,7 +85,6 @@ class HRED(TorchGeneratorModel):
         start_idx=1,
         end_idx=2,
         unknown_idx=3,
-        input_dropout=0,
         longest_label=1,
     ):
         """
@@ -98,7 +97,6 @@ class HRED(TorchGeneratorModel):
             start_idx=start_idx,
             end_idx=end_idx,
             unknown_idx=unknown_idx,
-            input_dropout=input_dropout,
             longest_label=longest_label,
         )
         self.attn_type = attention
@@ -115,7 +113,6 @@ class HRED(TorchGeneratorModel):
             attn_type=attention,
             attn_length=attention_length,
             attn_time=attention_time,
-            bidir_input=bidirectional,
         )
 
         shared_emb = (
@@ -128,7 +125,6 @@ class HRED(TorchGeneratorModel):
             num_features,
             embeddingsize,
             hiddensize,
-            sess_hsize,
             padding_idx=padding_idx,
             rnn_class=rnn_class,
             numlayers=numlayers,
@@ -136,22 +132,13 @@ class HRED(TorchGeneratorModel):
             bidirectional=bidirectional,
             shared_emb=shared_emb,
             shared_rnn=shared_rnn,
-            unknown_idx=unknown_idx,
-            input_dropout=input_dropout,
         )
 
-        self.base_encoder = SessionEncoder(
-            hiddensize,
-            sess_hsize,
-            padding_idx=padding_idx,
+        self.session_encoder = SessionEncoder(
+            utt_hiddensize=hiddensize,
+            sess_hiddensize=sess_hsize,
             rnn_class=rnn_class,
-            numlayers=numlayers,
             dropout=dropout,
-            bidirectional=bidirectional,
-            shared_emb=shared_emb,
-            shared_rnn=shared_rnn,
-            unknown_idx=unknown_idx,
-            input_dropout=input_dropout,
         )
 
         shared_weight = (
@@ -173,7 +160,7 @@ class HRED(TorchGeneratorModel):
         """
         Reorder encoder states according to a new set of indices.
         """
-        enc_out, hidden, attn_mask = encoder_states
+        hidden = encoder_states
 
         # make sure we swap the hidden state around, apropos multigpu settings
         hidden = _transpose_hidden_state(hidden)
@@ -195,14 +182,12 @@ class HRED(TorchGeneratorModel):
             cell = cell.index_select(1, indices)
             hidden = (hid, cell)
 
-        if self.attn_type != 'none':
-            enc_out = enc_out.index_select(0, indices)
-            attn_mask = attn_mask.index_select(0, indices)
+
 
         # and bring it back to multigpu friendliness
         hidden = _transpose_hidden_state(hidden)
 
-        return enc_out, hidden, attn_mask
+        return hidden
 
     def reorder_decoder_incremental_state(self, incremental_state, inds):
         if torch.is_tensor(incremental_state):
@@ -214,6 +199,57 @@ class HRED(TorchGeneratorModel):
                 for x in incremental_state
             )
 
+    def forward(self, *xs, ys=None, prev_enc=None, maxlen=None, bsz=None):
+        """
+        Get output predictions from the model.
+
+        :param xs:
+            input to the encoder
+        :type xs:
+            LongTensor[bsz, seqlen]
+        :param ys:
+            Expected output from the decoder. Used
+            for teacher forcing to calculate loss.
+        :type ys:
+            LongTensor[bsz, outlen]
+        :param prev_enc:
+            if you know you'll pass in the same xs multiple times, you can pass
+            in the encoder output from the last forward pass to skip
+            recalcuating the same encoder output.
+        :param maxlen:
+            max number of tokens to decode. if not set, will use the length of
+            the longest label this model has seen. ignored when ys is not None.
+        :param bsz:
+            if ys is not provided, then you must specify the bsz for greedy
+            decoding.
+
+        :return:
+            (scores, candidate_scores, encoder_states) tuple
+
+            - scores contains the model's predicted token scores.
+              (FloatTensor[bsz, seqlen, num_features])
+            - candidate_scores are the score the model assigned to each candidate.
+              (FloatTensor[bsz, num_cands])
+            - encoder_states are the output of model.encoder. Model specific types.
+              Feed this back in to skip encoding on the next call.
+        """
+        assert ys is not None, "Greedy decoding in TGModel.forward no longer supported."
+        # TODO: get rid of longest_label
+        # keep track of longest label we've ever seen
+        # we'll never produce longer ones than that during prediction
+        (u1,u2,u3) = xs
+
+        self.longest_label = max(self.longest_label, ys.size(1))
+
+        # use cached encoding if available
+        o1,o2 = self.base_encoder(u1),self.base_encoder(u2)
+        qu_seq = torch.cat((o1, o2), 1)
+
+        final_session_o = self.session_encoder(qu_seq)
+
+        # use teacher forcing
+        scores, preds = self.decode_forced(final_session_o, ys)
+        return scores, preds, final_session_o
 
 class BaseEncoder(nn.Module):
     """
@@ -227,7 +263,7 @@ class BaseEncoder(nn.Module):
         hiddensize,
         padding_idx=0,
         rnn_class=HRED.RNN_OPTS['gru'],
-        numlayers=2,
+        numlayers=1,
         dropout=0.1,
         bidirectional=False,
         shared_emb=None,
@@ -280,26 +316,26 @@ class BaseEncoder(nn.Module):
         bsz = len(xs)
 
         # embed input tokens
-        xes = self.dropout(self.embed(xs))
+        xes = self.drop(self.embed(xs))
         attn_mask = xs.ne(0)
         try:
             x_lens = torch.sum(attn_mask.int(), dim=1)
-            xes = pack_padded_sequence(xes, x_lens, batch_first=True)
+            xes = pack_padded_sequence(xes, x_lens, batch_first=True, enforce_sorted=False)
             packed = True
         except ValueError:
             # packing failed, don't pack then
             packed = False
 
         encoder_output, hidden = self.rnn(xes)
-        if packed:
-            # total_length to make sure we give the proper length in the case
-            # of multigpu settings.
-            # https://pytorch.org/docs/stable/notes/faq.html#pack-rnn-unpack-with-data-parallelism
-            encoder_output, _ = pad_packed_sequence(
-                encoder_output, batch_first=True, total_length=xs.size(1)
-            )
+        # if packed:
+        #     # total_length to make sure we give the proper length in the case
+        #     # of multigpu settings.
+        #     # https://pytorch.org/docs/stable/notes/faq.html#pack-rnn-unpack-with-data-parallelism
+        #     encoder_output, _ = pad_packed_sequence(
+        #         encoder_output, batch_first=True, total_length=xs.size(1), enforce_sorted=False
+        #     )
 
-        if self.dirs > 1:
+        if self.direction > 1:
             # project to decoder dimension by taking sum of forward and back
             if isinstance(self.rnn, nn.LSTM):
                 hidden = (
@@ -307,9 +343,11 @@ class BaseEncoder(nn.Module):
                     hidden[1].view(-1, self.dirs, bsz, self.hsz).sum(1),
                 )
             else:
-                hidden = hidden.view(-1, self.dirs, bsz, self.hsz).sum(1)
+                hidden = hidden.view(-1,self.dirs, bsz, self.hsz).sum(1)
+        hidden = hidden[self.num_lyr - 1, :, :].unsqueeze(0)
+        hidden_transpose = _transpose_hidden_state(hidden)
 
-        return encoder_output, _transpose_hidden_state(hidden), attn_mask
+        return hidden_transpose
 
 class SessionEncoder(nn.Module):
     """
@@ -318,8 +356,8 @@ class SessionEncoder(nn.Module):
 
     def __init__(
         self,
-        sess_hiddensize,
-        utt_hiddensize,
+        sess_hiddensize=1200,
+        utt_hiddensize=600,
         rnn_class=HRED.RNN_OPTS['gru'],
         dropout=0.1,
     ):
@@ -348,10 +386,10 @@ class SessionEncoder(nn.Module):
 
         :returns: session encoding output
         """
-        h_0 = Variable(torch.zeros(1, x.size(0), self.hid_size))
+        h_0 = Variable(torch.zeros(1, x.size(0), self.sess_hiddensize))
         # output, h_n for output batch is already dim 0
         h_o, h_n = self.rnn(x, h_0)
-        h_n = h_n.view(x.size(0), -1, self.hid_size)
+        h_n = h_n.view(x.size(0), -1, self.sess_hiddensize)
         return h_n
 
 class RNNDecoder(nn.Module):
@@ -366,11 +404,11 @@ class RNNDecoder(nn.Module):
         num_features,
         embeddingsize,
         hiddensize,
+        sess_hiddensize=1200,
         padding_idx=0,
         rnn_class=HRED.RNN_OPTS['gru'],
-        numlayers=2,
+        numlayers=1,
         dropout=0.1,
-        bidir_input=False,
         attn_type='none',
         attn_time='pre',
         attn_length=-1,
@@ -384,10 +422,12 @@ class RNNDecoder(nn.Module):
         self.num_lyr = numlayers
         self.hid_size = hiddensize
         self.emb_size = embeddingsize
-
-        self.embed_in = nn.Embedding(
+        self.sess_hid_size = sess_hiddensize
+        self.tanh = nn.Tanh()
+        self.embed = nn.Embedding(
             num_features, embeddingsize, padding_idx=padding_idx, sparse=sparse
         )
+        self.ses_to_dec = nn.Linear(self.sess_hid_size, self.hid_size)
         self.rnn = rnn_class(
             embeddingsize,
             hiddensize,
@@ -408,7 +448,7 @@ class RNNDecoder(nn.Module):
         #     attn_time=attn_time,
         # )
 
-    def forward(self, xs, encoder_output, incremental_state=None):
+    def forward(self, xs, encoder_output):
         """
         Decode from input tokens.
 
@@ -427,20 +467,8 @@ class RNNDecoder(nn.Module):
                 the model's OutputLayer for a final softmax.
             - hidden_state depends on the choice of RNN
         """
-        enc_state, enc_hidden, attn_mask = encoder_output
-        # in case of multi gpu, we need to transpose back out the hidden state
-        attn_params = (enc_state, attn_mask)
-
-        if incremental_state is not None:
-            # we're doing it piece by piece, so we have a more important hidden
-            # seed, and we only need to compute for the final timestep
-            hidden = _transpose_hidden_state(incremental_state)
-            # only need the last timestep then
-            xs = xs[:, -1:]
-        else:
-            # starting fresh, or generating from scratch. Use the encoder hidden
-            # state as our start state
-            hidden = _transpose_hidden_state(enc_hidden)
+        enc_hidden = encoder_output
+        hidden = _transpose_hidden_state(enc_hidden)
 
         if isinstance(hidden, tuple):
             hidden = tuple(x.contiguous() for x in hidden)
@@ -449,30 +477,10 @@ class RNNDecoder(nn.Module):
 
         # sequence indices => sequence embeddings
         seqlen = xs.size(1)
-        xes = self.dropout(self.embed(xs))
+        xes = self.drop(self.embed(xs))
 
-        if self.attn_time == 'pre':
-            # modify input vectors with attention
-            # attention module requires we do this one step at a time
-            new_xes = []
-            for i in range(seqlen):
-                nx, _ = self.attention(xes[:, i : i + 1], hidden, attn_params)
-                new_xes.append(nx)
-            xes = torch.cat(new_xes, 1).to(xes.device)
-
-        if self.attn_time != 'post':
-            # no attn, we can just trust the rnn to run through
-            output, new_hidden = self.rnn(xes, hidden)
-        else:
-            # uh oh, post attn, we need run through one at a time, and do the
-            # attention modifications
-            new_hidden = hidden
-            output = []
-            for i in range(seqlen):
-                o, new_hidden = self.rnn(xes[:, i, :].unsqueeze(1), new_hidden)
-                o, _ = self.attention(o, new_hidden, attn_params)
-                output.append(o)
-            output = torch.cat(output, dim=1).to(xes.device)
+        init_hidn = self.tanh(self.ses_to_dec(hidden))
+        output, new_hidden = self.rnn(xes, init_hidn)
 
         return output, _transpose_hidden_state(new_hidden)
 

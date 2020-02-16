@@ -53,7 +53,7 @@ class MovieTripleTeacher(FixedDialogTeacher):
 						else:
 							u+= (' ' + word)
 				self.data.append(utterances)
-		import pdb;pdb.set_trace()
+		# import pdb;pdb.set_trace()
 
 	def _setup_data(self, fold):
 		self.data = []
@@ -64,21 +64,59 @@ class MovieTripleTeacher(FixedDialogTeacher):
 				utterances = d.strip().split('\t')
 				self.data.append(utterances)
 
+	def next_example(self):
+		"""
+		Return the next example. NO VECTORS -- nweir
 
-	def get(self, episode_idx, entry_idx=0):
+		If there are multiple examples in the same episode, returns the next one in that
+		episode. If that episode is over, gets a new episode index and returns the first
+		example of that episode.
+		"""
+
+		self.episode_idx = self.next_episode_idx()
+
+		if self.episode_idx >= self.num_episodes():
+			return {'episode_done': True}, True
+
+		print(f'ep: {self.episode_idx}')
+		ex = self.get(self.episode_idx)
+
+		if (
+				not self.random
+				and self.episode_done
+				and self.episode_idx + self.opt.get("batchsize", 1) >= self.num_episodes()
+		):
+			epoch_done = True
+		else:
+			epoch_done = False
+
+		return ex, epoch_done
+
+
+	## if triplets, this doesn't need to have entry_idx
+	def get(self, episode_idx, entry_idx=None):
+	# def get(self, episode_idx):
+		assert entry_idx == None
+
+		# if T says u1, speaker_id = 1
 		speaker_id = episode_idx % 2
 		full_eps = self.data[episode_idx // 2]
+		index_of_T_utt = 1 if speaker_id else 2
 
 		entries = [START_ENTRY] + full_eps
-		their_turn = entries[speaker_id + 2 * entry_idx]
-		my_turn = entries[1 + speaker_id + 2 * entry_idx]
+		hist = entries[index_of_T_utt-1:index_of_T_utt+1]
+		T_utt = entries[index_of_T_utt]
+		M_utt = entries[1 + index_of_T_utt]
 
-		episode_done = 2 * entry_idx + speaker_id + 1 >= len(full_eps) - 1
+		# episode_done = 2 * entry_idx + speaker_id + 1 >= len(full_eps) - 1
+		episode_done=True
 		action = {
-			'text': their_turn,
+			'text': T_utt,
+			'hist': hist,
 			'episode_done': episode_done,
-			'labels': [my_turn],
+			'labels': [M_utt],
 		}
+		print(action)
 		return action
 
 	def share(self):

@@ -358,7 +358,7 @@ class FixedDialogTeacher(Teacher):
 
     def next_example(self):
         """
-        Return the next example.
+        Return the next example. NO VECTORS -- nweir
 
         If there are multiple examples in the same episode, returns the next one in that
         episode. If that episode is over, gets a new episode index and returns the first
@@ -373,6 +373,7 @@ class FixedDialogTeacher(Teacher):
         if self.episode_idx >= self.num_episodes():
             return {'episode_done': True}, True
 
+        print(f'ep: {self.episode_idx}, entr: {self.entry_idx}')
         ex = self.get(self.episode_idx, self.entry_idx)
         self.episode_done = ex.get('episode_done', False)
 

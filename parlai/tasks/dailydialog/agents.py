@@ -59,6 +59,7 @@ class Convai2Teacher(FixedDialogTeacher):
                 self.data.append(json.loads(line))
 
     def get(self, episode_idx, entry_idx=0):
+        #import pdb;pdb.set_trace()
         # Sometimes we're speaker 1 and sometimes we're speaker 2
         speaker_id = episode_idx % 2
         full_eps = self.data[episode_idx // 2]
@@ -72,6 +73,8 @@ class Convai2Teacher(FixedDialogTeacher):
         action = {
             'topic': full_eps['topic'],
             'text': their_turn['text'],
+            'past_utterances': [
+                entry['text'] for entry in entries[:1 + speaker_id + 2 * entry_idx]],
             'emotion': their_turn['emotion'],
             'act_type': their_turn['act'],
             'labels': [my_turn['text']],

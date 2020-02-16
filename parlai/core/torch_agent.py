@@ -43,6 +43,7 @@ from parlai.utils.torch import (
     fp16_available,
 )
 
+START_ENTRY =  '__SILENCE__'
 
 class Batch(AttrDict):
     """
@@ -98,6 +99,10 @@ class Batch(AttrDict):
         label_vec=None,
         label_lengths=None,
         labels=None,
+        u1_vecs=None,
+        u1_lengths=None,
+        u2_vecs=None,
+        u2_lengths=None,
         valid_indices=None,
         candidates=None,
         candidate_vecs=None,
@@ -111,6 +116,10 @@ class Batch(AttrDict):
             label_vec=label_vec,
             label_lengths=label_lengths,
             labels=labels,
+            u1_vecs=u1_vecs,
+            u1_lengths=u1_lengths,
+            u2_vecs=u2_vecs,
+            u2_lengths=u2_lengths,
             valid_indices=valid_indices,
             candidates=candidates,
             candidate_vecs=candidate_vecs,
@@ -191,9 +200,12 @@ class History(object):
         self.vec_type = vec_type
         self.max_len = maxlen
 
+        # self.full_history_strings = []
+        # self.full_history_raw_strings = []
         self.history_strings = []
         self.history_raw_strings = []
         self.history_vecs = []
+        # self.full_history_vecs = []
 
         # person token args
         self.add_person_tokens = opt.get('person_tokens', False)
@@ -216,22 +228,27 @@ class History(object):
         self.history_vecs = []
 
     def _update_strings(self, text):
+        # if not self.history_strings and text != START_ENTRY: import pdb;pdb.set_trace()
         if self.size > 0:
             while len(self.history_strings) >= self.size:
                 self.history_strings.pop(0)
         self.history_strings.append(text)
+        # self.full_history_strings.append(text)
 
     def _update_raw_strings(self, text):
         if self.size > 0:
             while len(self.history_raw_strings) >= self.size:
                 self.history_raw_strings.pop(0)
         self.history_raw_strings.append(text)
+        # self.full_history_raw_strings.append(text)
+
 
     def _update_vecs(self, text):
         if self.size > 0:
             while len(self.history_vecs) >= self.size:
                 self.history_vecs.pop(0)
         self.history_vecs.append(self.parse(text))
+        # self.full_history_vecs.append(self.parse(text))
 
     def add_reply(self, text):
         """
@@ -248,22 +265,33 @@ class History(object):
     def update_history(self, obs):
         """
         Update the history with the given observation.
+        nweir-- switched next_texts to accomodate for obs['text'] having list lists
         """
         if self.field in obs and obs[self.field] is not None:
             if self.split_on_newln:
                 next_texts = obs[self.field].split('\n')
             else:
                 next_texts = [obs[self.field]]
-            for text in next_texts:
-                self._update_raw_strings(text)
-                if self.add_person_tokens:
-                    text = self._add_person_tokens(
-                        obs[self.field], self.p1_token, self.add_p1_after_newln
-                    )
-                # update history string
-                self._update_strings(text)
-                # update history vecs
-                self._update_vecs(text)
+            if 'hist' in obs:
+                assert not self.history_strings
+                # training!!!
+                for ut in obs["hist"]:
+                    self._update_strings(ut)
+                    self._update_raw_strings(ut)
+                    self._update_vecs(ut)
+            else:
+                for text in next_texts:
+                    self._update_raw_strings(text)
+                    if self.add_person_tokens:
+                        text = self._add_person_tokens(
+                            obs[self.field],
+                            self.p1_token,
+                            self.add_p1_after_newln
+                        )
+                    # update history string
+                    self._update_strings(text)
+                    # update history vecs
+                    self._update_vecs(text)
 
     def get_history_str(self):
         """
@@ -272,6 +300,15 @@ class History(object):
         if len(self.history_strings) > 0:
             return self.delimiter.join(self.history_strings)
         return None
+
+
+    # def get_full_history_strs(self):
+    #     """
+    #     Return the string version of the history.
+    #     """
+    #     if len(self.full_history_strings) > 0:
+    #         return self.full_history_strings
+    #     return None
 
     def get_history_vec(self):
         """
@@ -301,6 +338,9 @@ class History(object):
         Return a list of history vecs.
         """
         return self.history_vecs
+
+    def get_history_text_list(self):
+        return self.history_strings
 
     def _add_person_tokens(self, text, token, add_after_newln=False):
         if add_after_newln:
@@ -534,7 +574,7 @@ class TorchAgent(ABC, Agent):
         agent.add_argument(
             '-histsz',
             '--history-size',
-            default=-1,
+            default=3,
             type=int,
             help='Number of past dialog utterances to remember.',
         )
@@ -694,6 +734,7 @@ class TorchAgent(ABC, Agent):
             p1_token=self.P1_TOKEN,
             p2_token=self.P2_TOKEN,
             dict_agent=self.dict,
+            vec_type="list"
         )
 
     def build_dictionary(self):
@@ -1148,6 +1189,38 @@ class TorchAgent(ABC, Agent):
             obs.force_set('text_vec', torch.LongTensor(truncated_vec))
         return obs
 
+
+    # def _set_past_utterance_vec(self, obs, history, truncate):
+    #     """
+    #             Set the 'text_vec' field in the observation.
+    #
+    #             Useful to override to change vectorization behavior
+    #             """
+    #
+    #     if 'past_utterances' not in obs:
+    #         import pdb;pdb.set_trace()
+    #         return obs
+    #
+    #     if 'past_utt_vecs' not in obs:
+    #         # text vec is not precomputed, so we set it using the history LIST
+    #         history_strings = history.get_full_history_strs()
+    #         # when text not exist, we get text_vec from history string
+    #         # history could be none if it is an image task and 'text'
+    #         # filed is be empty. We don't want this
+    #         if history_strings is None:
+    #             return obs
+    #
+    #         obs['full_history_texts'] = history_strings
+    #         if history_strings:
+    #             obs['full_history_vecs'] = history.get_history_vec()
+    #
+    #     # check truncation
+    #     if obs.get('text_vec') is not None:
+    #         truncated_vec = self._check_truncate(obs['text_vec'], truncate, True)
+    #         obs.force_set('text_vec', torch.LongTensor(truncated_vec))
+    #     return obs
+
+
     def _set_label_vec(self, obs, add_start, add_end, truncate):
         """
         Set the 'labels_vec' field in the observation.
@@ -1197,6 +1270,20 @@ class TorchAgent(ABC, Agent):
                 self._vectorize_text(c, add_start, add_end, truncate, False)
                 for c in obs['label_candidates']
             ]
+        return obs
+
+    def _set_u_vecs(self, obs, history, truncate):
+        if 'hist' not in obs:
+            raise NotImplementedError
+        else:
+            for i, u in enumerate(obs['hist']):
+                obs[f'u{i + 1}_text'] = history.get_history_text_list()[i]
+                obs[f'u{i + 1}_vecs'] = history.get_history_vec_list()[i]
+                vecs = []
+                for vec in obs[f'u{i + 1}_vecs']:
+                    vecs.append(self._check_truncate(vec, truncate, True))
+                obs.force_set(f'u{i+1}_vecs', torch.LongTensor(vecs))
+
         return obs
 
     def vectorize(
@@ -1250,9 +1337,11 @@ class TorchAgent(ABC, Agent):
             the input observation, with 'text_vec', 'label_vec', and
             'cands_vec' fields added.
         """
+        self._set_u_vecs(obs, history, text_truncate)
         self._set_text_vec(obs, history, text_truncate)
         self._set_label_vec(obs, add_start, add_end, label_truncate)
-        self._set_label_cands_vec(obs, add_start, add_end, label_truncate)
+        # self._set_label_cands_vec(obs, add_start, add_end, label_truncate)
+        # self._set_past_utterance_vec(obs, history, text_truncate)
         return obs
 
     def is_valid(self, obs):
@@ -1294,14 +1383,33 @@ class TorchAgent(ABC, Agent):
         valid_obs = [(i, ex) for i, ex in enumerate(obs_batch) if self.is_valid(ex)]
 
         if len(valid_obs) == 0:
+            import pdb;pdb.set_trace()
             return Batch()
 
         valid_inds, exs = zip(*valid_obs)
+        #
+        # def _get_tensor(obs_key):
+        #     xs, x_lens = None, None
+        #     if any(ex.get(obs_key) is not None for ex in exs):
+        #         # text vectors
+        #         _xs = [ex.get(obs_key, self.EMPTY) for ex in exs]
+        #
+        #         xs, x_lens = padded_tensor(
+        #             _xs, self.NULL_IDX, self.use_cuda, fp16friendly=self.opt.get('fp16')
+        #         )
+        #         if sort:
+        #             sort = False  # now we won't sort on labels
+        #             xs, x_lens, valid_inds, exs = argsort(
+        #                 x_lens, xs, x_lens, valid_inds, exs, descending=True
+        #             )
+        #     return xs, x_lens, valid_inds, exs
 
         # TEXT
         xs, x_lens = None, None
         if any(ex.get('text_vec') is not None for ex in exs):
+            #text vectors
             _xs = [ex.get('text_vec', self.EMPTY) for ex in exs]
+
             xs, x_lens = padded_tensor(
                 _xs, self.NULL_IDX, self.use_cuda, fp16friendly=self.opt.get('fp16')
             )
@@ -1310,6 +1418,7 @@ class TorchAgent(ABC, Agent):
                 xs, x_lens, valid_inds, exs = argsort(
                     x_lens, xs, x_lens, valid_inds, exs, descending=True
                 )
+
 
         # LABELS
         labels_avail = any('labels_vec' in ex for ex in exs)
@@ -1334,6 +1443,35 @@ class TorchAgent(ABC, Agent):
                     y_lens, ys, valid_inds, label_vecs, labels, y_lens, descending=True
                 )
 
+        # U1
+        u1s_avail = any('u1_vecs' in ex for ex in exs)
+        u1s, u1_lens, u1_texts = None, None, None
+        if u1s_avail:
+            u1_vecs = [ex.get('u1_vecs', self.EMPTY) for ex in exs]
+            u1_texts = [ex.get('u1_text') for ex in exs]
+
+            u1s, u1lens = padded_tensor(
+                u1_vecs,
+                self.NULL_IDX,
+                self.use_cuda,
+                fp16friendly=self.opt.get('fp16'),
+            )
+
+        # U2
+        u2s_avail = any('u2_vecs' in ex for ex in exs)
+        u2s, u2_lens, u2_texts = None, None, None
+        if u2s_avail:
+            u2_vecs = [ex.get('u2_vecs', self.EMPTY) for ex in exs]
+            u2_texts = [ex.get('u2_text') for ex in exs]
+
+            u2s, u2lens = padded_tensor(
+                u2_vecs,
+                self.NULL_IDX,
+                self.use_cuda,
+                fp16friendly=self.opt.get('fp16'),
+            )
+
+
         # LABEL_CANDIDATES
         cands, cand_vecs = None, None
         if any('label_candidates_vecs' in ex for ex in exs):
@@ -1351,6 +1489,10 @@ class TorchAgent(ABC, Agent):
             label_vec=ys,
             label_lengths=y_lens,
             labels=labels,
+            u1_vecs=u1s,
+            u1_lengths=u1_lens,
+            u2_vecs=u2s,
+            u2_lengths=u2_lens,
             valid_indices=valid_inds,
             candidates=cands,
             candidate_vecs=cand_vecs,
@@ -1703,6 +1845,7 @@ class TorchAgent(ABC, Agent):
         batch = self.batchify(observations)
 
         if self.is_training:
+            #import pdb;pdb.set_trace()
             output = self.train_step(batch)
         else:
             with torch.no_grad():

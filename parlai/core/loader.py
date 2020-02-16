@@ -37,6 +37,8 @@ def _name_to_agent_class(name: str):
         class_name += w[0].upper() + w[1:]
     # add Agent to the end of the name
     class_name += 'Agent'
+
+    class_name = class_name.replace('Hred','HRED')
     return class_name
 
 

@@ -69,6 +69,7 @@ class DownloadableFile:
             for byte_block in iter(lambda: f.read(65536), b""):
                 sha256_hash.update(byte_block)
             if sha256_hash.hexdigest() != self.hashcode:
+                import pdb;pdb.set_trace()
                 # remove_dir(dpath)
                 raise AssertionError(
                     f"[ Checksum for {self.file_name} from \n{self.url}\n"
