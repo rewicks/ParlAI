@@ -386,9 +386,8 @@ class SessionEncoder(nn.Module):
 
         :returns: session encoding output
         """
-        h_0 = Variable(torch.zeros(1, x.size(0), self.sess_hiddensize))
         # output, h_n for output batch is already dim 0
-        h_o, h_n = self.rnn(x, h_0)
+        h_o, h_n = self.rnn(x)
         h_n = h_n.view(x.size(0), -1, self.sess_hiddensize)
         return h_n
 
