@@ -112,6 +112,7 @@ class DictionaryAgent(Agent):
     default_end = '__end__'
     default_unk = '__unk__'
     placeholders = ['<person>', '<number>','<continued_utterance>']
+    default_silence = '__SILENCE__'
 
     default_tok = 're'
     default_lower = False
@@ -192,6 +193,12 @@ class DictionaryAgent(Agent):
             help='tokens for placeholders (e.g. <person>) -- nweir',
         )
         dictionary.add_argument(
+            '--dict-silence',
+            default=DictionaryAgent.default_silence,
+            hidden=True,
+            help='token for silence (e.g. __SILENCE__) -- nweir',
+        )
+        dictionary.add_argument(
             '--dict-unktoken',
             default=DictionaryAgent.default_unk,
             hidden=True,
@@ -240,6 +247,7 @@ class DictionaryAgent(Agent):
         self.unk_token = opt.get('dict_unktoken', DictionaryAgent.default_unk)
         self.start_token = opt.get('dict_starttoken', DictionaryAgent.default_start)
         self.placeholders = opt.get('placeholders', DictionaryAgent.placeholders)
+        self.default_silence = opt.get('dict_silence', DictionaryAgent.default_silence)
         self.max_ngram_size = opt.get(
             'dict_max_ngram_size', DictionaryAgent.default_maxngram
         )
@@ -283,6 +291,8 @@ class DictionaryAgent(Agent):
             if self.placeholders:
                 for p in self.placeholders:
                     self.add_token(p)
+            if self.default_silence:
+                self.add_token(self.default_silence)
 
 
             loaded = False

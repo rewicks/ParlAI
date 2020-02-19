@@ -27,6 +27,7 @@ import json
 import random
 import os
 import torch
+import time
 from torch import optim
 
 from parlai.core.opt import Opt
@@ -273,8 +274,6 @@ class History(object):
             else:
                 next_texts = [obs[self.field]]
             if 'hist' in obs:
-                assert not self.history_strings
-                # training!!!
                 for ut in obs["hist"]:
                     self._update_strings(ut)
                     self._update_raw_strings(ut)
@@ -574,7 +573,7 @@ class TorchAgent(ABC, Agent):
         agent.add_argument(
             '-histsz',
             '--history-size',
-            default=3,
+            default=2,
             type=int,
             help='Number of past dialog utterances to remember.',
         )
@@ -1276,9 +1275,10 @@ class TorchAgent(ABC, Agent):
         if 'hist' not in obs:
             raise NotImplementedError
         else:
-            for i, u in enumerate(obs['hist']):
-                obs[f'u{i + 1}_text'] = history.get_history_text_list()[i]
-                obs[f'u{i + 1}_vecs'] = history.get_history_vec_list()[i]
+            # for i, u in enumerate(obs['hist'][-2:]):
+            for i in range(2):
+                obs[f'u{i + 1}_text'] = history.get_history_text_list()[-(2-i)]
+                obs[f'u{i + 1}_vecs'] = history.get_history_vec_list()[-(2-i)]
                 vecs = []
                 for vec in obs[f'u{i + 1}_vecs']:
                     vecs.append(self._check_truncate(vec, truncate, True))
@@ -1559,6 +1559,18 @@ class TorchAgent(ABC, Agent):
         elif 'labels' in observation or 'eval_labels' in observation:
             # make sure we note that we're expecting a reply in the future
             self.__expecting_to_reply = True
+
+        if not self.is_training and 'hist' not in observation:
+            if not self.history.history_strings:
+                observation['hist'] = [
+                    '__SILENCE__',
+                    observation['text']
+                ]
+            else:
+                observation['hist'] = [
+                    observation['text']
+                ]
+
 
         self.observation = observation
         # update the history using the observation
@@ -1844,6 +1856,7 @@ class TorchAgent(ABC, Agent):
         # create a batch from the vectors
         batch = self.batchify(observations)
 
+
         if self.is_training:
             #import pdb;pdb.set_trace()
             output = self.train_step(batch)
@@ -1852,7 +1865,6 @@ class TorchAgent(ABC, Agent):
                 # save memory and compute by disabling autograd.
                 # use `with torch.enable_grad()` to gain back graidients.
                 output = self.eval_step(batch)
-
         if output is None:
             return batch_reply
 
