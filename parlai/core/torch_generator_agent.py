@@ -457,6 +457,8 @@ class TorchGeneratorAgent(TorchAgent, ABC):
         return Batch(
             text_vec=torch.ones(batchsize, maxlen).long().cuda(),
             label_vec=torch.ones(batchsize, 2).long().cuda(),
+            u1_vecs=torch.ones(batchsize, maxlen).long().cuda(),
+            u2_vecs=torch.ones(batchsize, maxlen).long().cuda(),
             text_lengths=[maxlen] * batchsize,
         )
 

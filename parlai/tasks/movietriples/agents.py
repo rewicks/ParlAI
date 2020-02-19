@@ -78,7 +78,7 @@ class MovieTripleTeacher(FixedDialogTeacher):
 		if self.episode_idx >= self.num_episodes():
 			return {'episode_done': True}, True
 
-		print(f'ep: {self.episode_idx}')
+		# print(f'ep: {self.episode_idx}')
 		ex = self.get(self.episode_idx)
 
 		if (
@@ -116,7 +116,6 @@ class MovieTripleTeacher(FixedDialogTeacher):
 			'episode_done': episode_done,
 			'labels': [M_utt],
 		}
-		print(action)
 		return action
 
 	def share(self):
