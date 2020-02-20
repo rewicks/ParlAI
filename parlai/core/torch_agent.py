@@ -1337,6 +1337,7 @@ class TorchAgent(ABC, Agent):
             the input observation, with 'text_vec', 'label_vec', and
             'cands_vec' fields added.
         """
+        if 'text' not in obs: return obs
         self._set_u_vecs(obs, history, text_truncate)
         self._set_text_vec(obs, history, text_truncate)
         self._set_label_vec(obs, add_start, add_end, label_truncate)
@@ -1565,10 +1566,14 @@ class TorchAgent(ABC, Agent):
                 observation['hist'] = [
                     '__SILENCE__',
                     observation['text']
+                ] if 'text' in observation else [
+                    '__SILENCE__',
                 ]
             else:
                 observation['hist'] = [
                     observation['text']
+                ] if 'text' in observation else [
+
                 ]
 
 

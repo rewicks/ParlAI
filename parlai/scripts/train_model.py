@@ -250,7 +250,9 @@ def _run_single_eval(opt, valid_world, max_exs):
 
     cnt = 0
     max_cnt = max_exs if max_exs > 0 else float('inf')
+    i=0
     while not valid_world.epoch_done() and cnt < max_cnt:
+        i+=1
         valid_world.parley()
         if cnt == 0 and opt['display_examples']:
             print(valid_world.display() + '\n~~')

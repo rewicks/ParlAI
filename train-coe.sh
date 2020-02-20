@@ -30,7 +30,8 @@ python -m parlai.scripts.train_model \
         --embeddingsize 300 \
         -stim 1800 \
         --max-train-time 147600 \
-        -veps 0.5 \
+        -veps 5 \
+        -vme 5000 \
         -lr 0.001 \
         --dropout 0.1 \
         -sval True
