@@ -1,3 +1,6 @@
+FORK:
+https://github.com/rewicks/ParlAI/
+ 
 MODEL:
 stored on the coe grid (let us know if you don't have access to it) at
 /exp/rwicks/ParlAI/movietriples_2-19/single.model.{checkpoint, checkpoint.dict, checkpoint.dict.opt}
@@ -17,7 +20,37 @@ for interaction (no alexa):
 1. copy the model directory from /exp/rwicks/ParlAI/movietriples_2-19/ on the coe grid
 2. run 'python examples/eval_model.py -mf movietriples_2-19/single.model.checkpoint -t movietriples -dt test'
 
+==================================
+CHANGES TO ParlAI IMPLEMENTATION:
 
+1.	We constructed a duplicate of the dailydialog task whose teacher
+	agent reads in the movietriples dataset. It outputs two training
+	examples per triplet: one that teaches the model to output
+	u2 given u1 and __SILENCE and one that teaches u3 given u2 and u1.
+		1a. We did not bother with task 'building.' We instead dumped the
+		{train,valid,test}.txt files in the data directory and tricked
+		ParlAI into thinking the task had already been built by duplicating
+		the .built file from dailydialog.
+		1b. We attempted to merge the two datasets into a single task
+		(labeled 'carlostriples' because carlos did the preprocessing >_>)
+		by sliding a window across dailydialog episodes and extracting
+		triples. We found that models trained on the combined dataset
+		did not converge to coherent responses at all, so we are only
+		submitting the movietriples-trained model.
+2.	We updated the core torch_agent.py (making it relatively not core)
+	to observe actions with hard-coded histories and store more items
+	 in its internal history class. It also has some hacky methods to
+	 deal with observations during interaction.py.
+3.	We wrote an HREDAgent as a duplicate of the Seq2seqAgent (also
+	implementing TorchGeneratorAgent) that has a very similar decoder but
+	performs hierarchical encoding.
+4.	We did not perform much of a hyperparam search. We trained the model
+	with both a .001 and a 1 LR, and found that the latter yielded much
+	more coherent models with much lower nll_loss (~4 vs ~7).
+		4a. Note that we rarely ran validation during training (and only
+		validated on a small subset of 5000 examples), because its calls
+		to _generate() were a computational bottleneck that led to
+		validation taking as long / longer than training epochs.
 
 ==================================
 EVALUATION:
@@ -46,7 +79,7 @@ Issues with the HRED agent:
 	movietriples dataset, but it resulted in a much worse model that doesn't say anything
 	except "i 'm sorry ." This might be because we removed previous utterances from contexts
 	to make them conform with the triplet format. Increasing context length should also help
-	with this?
+	with this? (Dailydialog was still far superior to our augmented data--carlostriples)
 
 Future work:
 
