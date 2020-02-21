@@ -1,0 +1,49 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "parley model zoo",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "MimicIntent",
+                    "slots": [
+                        {
+                            "name": "input",
+                            "type": "raw_text"
+                        }
+                    ],
+                    "samples": [
+                        "{input}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "raw_text",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "a a"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

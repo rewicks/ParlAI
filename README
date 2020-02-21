@@ -1,38 +1,13 @@
-Command used to train multi-gpu:
+1. create an alexa app in the developer console
+2. copy the manifest.json into the json editor on the developer console
+3. run ./ngrok
+4. run python lambda_function.py
+5. copy the https from ngrok into the alexa endpoint
+6. choose the second option from the dropdown
+7. talk to alexa
 
-python -m parlai.scripts.multiprocessing_train \
-        -bs 10 \
-        -t twitter \
-        -m seq2seq/seq2seq \
-        -mf models/multi-gpu.model \
-        -im models/multi-gpu.model.checkpoint \
-        --embedding-type fasttext_cc \
-        --numlayers 6 \
-        --embeddingsize 300 \
-        -stim 1800 \
-        --max-train-time 147600 \
-        --bidirectional True \
-        --attention general \
-        -veps 0.5 \
-        -lr 0.001 \
-        --dropout 0.1 \
-        -sval True
+[ Finished evaluating tasks ['movietriples'] using datatype test ]
+{'exs': 48542, 'accuracy': 0.005500391413621194, 'f1': 0.0868729140744965, 'bleu-4': 0.00040769832556888984, 'total_train_updates': 0, 'gpu_mem_percent': 0.103, 'loss': 190500.0, 'token_acc': 0.3226, 'nll_loss': 4.132, 'ppl': 62.33}
 
-
-Command used to train single-gpu/no multi-processing model:
-python -m parlai.scripts.train_model \
-        -bs 10 \
-        -t twitter \
-        -m seq2seq/seq2seq \
-        -mf single-model/single.model \
-        --embedding-type fasttext_cc \
-        --numlayers 2 \
-        --embeddingsize 300 \
-        -stim 1800 \
-        --max-train-time 147600 \
-        -veps 0.5 \
-        -lr 0.001 \
-        --dropout 0.1 \
-        -sval True
-
-Both resulted in very similar outputs. Our model is saved in the chat*.json while the PARLAI pretrained model is zoo-chat*.json. The single-gpu was allowed to train until the max time (roughly 20 hours) while the multi-gpu was cut off around 25 hours.
+[ Finished evaluating tasks ['movietriples'] using datatype valid ]
+{'exs': 49434, 'accuracy': 0.0055832018448840875, 'f1': 0.0872162364614846, 'bleu-4': 0.0005406841956268879, 'total_train_updates': 0, 'gpu_mem_percent': 0.0876, 'loss': 196500.0, 'token_acc': 0.3219, 'nll_loss': 4.164, 'ppl': 64.32}
