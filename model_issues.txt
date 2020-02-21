@@ -1,0 +1,22 @@
+Issues with the HRED agent
+
+1.  It only keeps track of a 2-length context-- that is, its own previous utterance
+	and the most recent utterance from the other speaker to respond to. This is just
+	an issue with the implementation, and could be rectified by storing an infinitely
+	long sequence of utterances in the parlai agent history to be passed to the forward()
+	function of the HRED model.
+2.  (related) It can get stuck in infinite loops in which it only responds with a generic
+	response-- e.g. "i 'm sorry" or "i don 't know". Extending the context and implementing
+	reverse LMing should both help with this.
+3.  We did not handle outputted __unk__ nor <person> placeholders.
+4.  We attempted to append dailydialog interactions (preprocessed into dialog triples) to the
+	movietriples dataset, but it resulted in a much worse model that doesn't say anything
+	except "i 'm sorry ." This might be because we removed previous utterances from contexts
+	to make them conform with the triplet format. Increasing context length should also help
+	with this?
+
+Future work
+1.  increasing context
+2.  adding the reverse LM objective
+3.  adding other datasets
+4.  hyperparameter search during training 
