@@ -1,5 +1,3 @@
-import os
-import torchtext.vocab as vocab
 from collections import defaultdict
 from scipy.stats import entropy
 import argparse
