@@ -1,0 +1,26 @@
+2020 Feb 12 Wed 16:41:17 EST test1 /home/hltcoe/rwicks/ParlAI/parlai   937  cd ..
+2020 Feb 12 Wed 16:42:46 EST test1 /home/hltcoe/rwicks/ParlAI/parlai   941  cd ..
+2020 Feb 12 Wed 18:16:33 EST test1 /home/hltcoe/rwicks/ParlAI/parlai   954  cd ..
+2020 Feb 12 Wed 18:17:05 EST test1 /home/hltcoe/rwicks/ParlAI/parlai   957  cd ..
+2020 Feb 12 Wed 18:17:05 EST test1 /home/hltcoe/rwicks/ParlAI/parlai   958  ls
+2020 Feb 14 Fri 13:53:30 EST test1 /home/hltcoe/rwicks/ParlAI/parlai  1032  cd parlai/
+2020 Feb 14 Fri 13:53:31 EST test1 /home/hltcoe/rwicks/ParlAI/parlai  1033  ls
+2020 Feb 14 Fri 14:04:01 EST test1 /home/hltcoe/rwicks/ParlAI/parlai  1034  npm install -g ask-cli.
+2020 Feb 14 Fri 14:04:03 EST test1 /home/hltcoe/rwicks/ParlAI/parlai  1035  npm install -g ask-cli
+2020 Mar 08 Sun 18:44:00 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai  1053  cd parlai
+2020 Mar 08 Sun 18:44:01 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai  1054  ls
+2020 Mar 08 Sun 18:44:19 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai  1058  cd ..
+2020 Mar 08 Sun 18:44:20 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai  1059  ls
+2020 Mar 08 Sun 18:44:33 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai  1062  cd ..
+2020 Mar 08 Sun 18:44:34 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai  1063  ls
+2020 Mar 08 Sun 18:44:55 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai  1064  git branch
+2020 Mar 08 Sun 18:45:13 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai  1065  git checkout master
+2020 Mar 08 Sun 18:45:34 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai  1066  git stash
+2020 Mar 08 Sun 18:45:36 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai  1067  git checkout master
+2020 Mar 08 Sun 18:45:39 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai  1068  git pull
+2020 Mar 08 Sun 19:33:19 EDT test1 /exp/rwicks/ParlAI/parlai  1000  cd ../..
+2020 Mar 08 Sun 19:33:19 EDT test1 /exp/rwicks/ParlAI/parlai  1001  ls
+2020 Mar 08 Sun 19:33:20 EDT test1 /exp/rwicks/ParlAI/parlai  1002  cd data
+2020 Mar 08 Sun 19:33:21 EDT test1 /exp/rwicks/ParlAI/parlai  1003  ls
+2020 Mar 08 Sun 19:50:06 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai  1098  cd ..
+2020 Mar 08 Sun 19:50:06 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai  1099  ls

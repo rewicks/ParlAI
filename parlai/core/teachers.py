@@ -780,8 +780,12 @@ class DialogData(object):
             class docstring.
         :param str datafile:
         """
+        count = 0
         for episode in self._read_episode(data_loader(datafile)):
             self.data.append(episode)
+            if count % 10000 == 0:
+                print(count)
+            count += 1
 
     def num_episodes(self):
         """

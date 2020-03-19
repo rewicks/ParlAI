@@ -190,8 +190,58 @@ class FilteredTeacher(FullTeacher):
     def __init__(self, opt, shared=None):
         super(FilteredTeacher, self).__init__(opt, shared, '2018', True)
 
+class FlippedTeacher(FbDialogTeacher):
+    """
+    This version of opensubtitles creates all possible dialog examples.
+    """
+    def __init__(self, opt, shared=None, version='2018', use_history=True):
+        opt = copy.deepcopy(opt)
+        opt['datafile'] = _path(opt, version, use_history)
+        if not opt['datatype'].startswith('train'):
+            opt['cands_datafile'] = opt['datafile']
+        super().__init__(opt, shared)
 
+    def setup_data(self, path):
+        def rebuild(entries):
+            if len(entries) == 0:
+                return []
+            # flip the first example
+            flipped = [(entries[0][0], [SILENCE_TOKEN], 0)]
+            #flipped = [(SILENCE_TOKEN, [entries[0][0]], 0)]
+            # flip the rest
+            #flipped += [
+            #    (entries[i][1][0], [entries[i + 1][0]], 0)
+            #    for i in range(len(entries) - 1)
+            #]
+            flipped += [
+                (entries[i+1][0], [entries[i][1][0]], 0)
+                for i in range(len(entries) - 1)
+            ]
+            return flipped
 
+        # this shows conversations in both directions
+        # we skip examples for which no label is present
+        alternate = []
+        for entry, new in super().setup_data(path):
+            if new:
+                for i, e in enumerate(rebuild(alternate)):
+                    if e[1]:
+                        yield e, i == 0
+                alternate.clear()
+            else:
+                alternate.append(entry)
+            if entry[1]:
+                yield entry, new
+            #import pdb; pdb.set_trace()
+
+        # flip the last episode
+        if alternate:
+            for i, e in enumerate(rebuild(alternate)):
+                if e[1]:
+                    yield e, i == 0
+            alternate.clear()
+
+ 
 # Defaults to full teacher (all possible examples)
 class DefaultTeacher(V2018Teacher):
     pass

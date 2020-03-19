@@ -1,0 +1,11 @@
+2020 Feb 12 Wed 16:40:25 EST test1 /home/hltcoe/rwicks/ParlAI/parlai/core   935  cd parlai/core/
+2020 Feb 12 Wed 16:41:15 EST test1 /home/hltcoe/rwicks/ParlAI/parlai/core   936  vim torch_generator_agent.py 
+2020 Feb 12 Wed 16:42:19 EST test1 /home/hltcoe/rwicks/ParlAI/parlai/core   939  cd parlai/core/
+2020 Feb 12 Wed 16:42:39 EST test1 /home/hltcoe/rwicks/ParlAI/parlai/core   940  vim torch_generator_agent.py 
+2020 Feb 12 Wed 18:06:50 EST test1 /home/hltcoe/rwicks/ParlAI/parlai/core   948  cd parlai/core/
+2020 Feb 12 Wed 18:07:17 EST test1 /home/hltcoe/rwicks/ParlAI/parlai/core   949  vim torch_agent.py 
+2020 Feb 12 Wed 18:14:22 EST test1 /home/hltcoe/rwicks/ParlAI/parlai/core   952  cd parlai/core/
+2020 Feb 12 Wed 18:15:33 EST test1 /home/hltcoe/rwicks/ParlAI/parlai/core   953  vim torch_agent.py 
+2020 Mar 08 Sun 18:44:11 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/core  1055  cd core/
+2020 Mar 08 Sun 18:44:12 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/core  1056  ls
+2020 Mar 08 Sun 18:44:18 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/core  1057  vim teachers.py 

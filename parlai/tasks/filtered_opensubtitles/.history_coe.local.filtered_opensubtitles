@@ -1,0 +1,57 @@
+2020 Mar 08 Sun 18:46:31 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1075  cd filtered_opensubtitles/
+2020 Mar 08 Sun 18:46:33 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1076  ls
+2020 Mar 08 Sun 18:47:23 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1077  vim agents.py 
+2020 Mar 08 Sun 18:48:57 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1078  tmux a
+2020 Mar 08 Sun 18:49:01 EDT test1 /exp/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles   999  exit
+2020 Mar 08 Sun 18:49:03 EDT test1 /exp/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1000  ls
+2020 Mar 08 Sun 19:11:00 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1053  cd parlai/tasks/filtered_opensubtitles/
+2020 Mar 08 Sun 19:11:01 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1054  ls
+2020 Mar 08 Sun 19:14:18 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1055  vim agents.py 
+2020 Mar 08 Sun 19:14:23 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1056  python -m parlai.scripts.train_model -m transformer/generator -t filtered_opensubtitles -mf models/tester
+2020 Mar 08 Sun 19:14:37 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1057  vim agents.py 
+2020 Mar 08 Sun 19:15:23 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1058  python -m parlai.scripts.train_model -m transformer/generator -t filtered_opensubtitles -mf models/tester
+2020 Mar 08 Sun 19:16:04 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1059  vim agents.py 
+2020 Mar 08 Sun 19:17:12 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1060  python -m parlai.scripts.train_model -m transformer/generator -t filtered_opensubtitles -mf models/tester
+2020 Mar 08 Sun 19:17:59 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1061  vim ../../core/teachers.py 
+2020 Mar 08 Sun 19:18:09 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1062  vim agents.py 
+2020 Mar 08 Sun 19:18:35 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1063  python -m parlai.scripts.train_model -m transformer/generator -t filtered_opensubtitles -mf models/tester
+2020 Mar 08 Sun 19:18:37 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1064  ls
+2020 Mar 08 Sun 19:20:03 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1065  vim agents.py 
+2020 Mar 08 Sun 19:20:13 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1066  vim ../../core/teachers.py 
+2020 Mar 08 Sun 19:20:51 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1066  vim ../../core/teachers.py 
+2020 Mar 08 Sun 19:21:07 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1067  vim agents.py 
+2020 Mar 08 Sun 19:21:16 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1068  python -m parlai.scripts.train_model -m transformer/generator -t filtered_opensubtitles -mf models/tester
+2020 Mar 08 Sun 19:23:04 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1069  vim agents.py 
+2020 Mar 08 Sun 19:23:28 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1069  vim agents.py 
+2020 Mar 08 Sun 19:23:36 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1070  python -m parlai.scripts.train_model -m transformer/generator -t filtered_opensubtitles -mf models/tester
+2020 Mar 08 Sun 19:24:00 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1071  vim agents.py 
+2020 Mar 08 Sun 19:24:22 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1072  python -m parlai.scripts.train_model -m transformer/generator -t filtered_opensubtitles -mf models/tester
+2020 Mar 08 Sun 19:24:27 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1073  ls
+2020 Mar 08 Sun 19:24:49 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1074  vim agents.py 
+2020 Mar 08 Sun 19:24:54 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1075  python -m parlai.scripts.train_model -m transformer/generator -t filtered_opensubtitles -mf models/tester
+2020 Mar 08 Sun 19:25:14 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1076  vim agents.py 
+2020 Mar 08 Sun 19:25:29 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1077  python -m parlai.scripts.train_model -m transformer/generator -t filtered_opensubtitles -mf models/tester
+2020 Mar 08 Sun 19:25:45 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1078  vim agents.py 
+2020 Mar 08 Sun 19:26:02 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1079  python -m parlai.scripts.train_model -m transformer/generator -t filtered_opensubtitles -mf models/tester
+2020 Mar 08 Sun 19:28:00 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1080  vim agents.py 
+2020 Mar 08 Sun 19:28:23 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1081  python -m parlai.scripts.train_model -m transformer/generator -t filtered_opensubtitles -mf models/tester
+2020 Mar 08 Sun 19:28:34 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1081  python -m parlai.scripts.train_model -m transformer/generator -t filtered_opensubtitles -mf models/tester
+2020 Mar 08 Sun 19:31:14 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1082  vim agents.py 
+2020 Mar 08 Sun 19:31:22 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1083  python -m parlai.scripts.train_model -m transformer/generator -t filtered_opensubtitles -mf models/tester
+2020 Mar 08 Sun 19:31:46 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1084  ls
+2020 Mar 08 Sun 19:32:03 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1085  vim agents.py 
+2020 Mar 08 Sun 19:32:04 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1086  ls
+2020 Mar 08 Sun 19:32:21 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1087  python -m parlai.scripts.train_model -m transformer/generator -t filtered_opensubtitles -mf models/tester
+2020 Mar 08 Sun 19:33:15 EDT test1 /exp/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles   999  ls parlai/tasks/
+2020 Mar 08 Sun 19:34:33 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1087  python -m parlai.scripts.train_model -m transformer/generator -t filtered_opensubtitles -mf models/tester
+2020 Mar 08 Sun 19:35:02 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1088  vim agents.py 
+2020 Mar 08 Sun 19:35:16 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1089  python -m parlai.scripts.train_model -m transformer/generator -t filtered_opensubtitles -mf models/tester
+2020 Mar 08 Sun 19:35:24 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1090  vim agents.py 
+2020 Mar 08 Sun 19:35:43 EDT test1 /exp/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles   999  head train.txt
+2020 Mar 08 Sun 19:36:06 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1091  python -m parlai.scripts.train_model -m transformer/generator -t filtered_opensubtitles -mf models/tester
+2020 Mar 08 Sun 19:36:33 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1092  vim agents.py 
+2020 Mar 08 Sun 19:45:47 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1093  python -m parlai.scripts.train_model -m transformer/generator -t filtered_opensubtitles -mf models/tester
+2020 Mar 08 Sun 19:46:16 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1094  vim agents.py 
+2020 Mar 08 Sun 19:46:34 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1095  python -m parlai.scripts.train_model -m transformer/generator -t filtered_opensubtitles:FlippedTeacher -mf models/tester
+2020 Mar 08 Sun 19:46:43 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1096  python -m parlai.scripts.train_model -m transformer/generator -t filtered_opensubtitles -mf models/tester
+2020 Mar 08 Sun 19:50:04 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/tasks/filtered_opensubtitles  1097  ls
