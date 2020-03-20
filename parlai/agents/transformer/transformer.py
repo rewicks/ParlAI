@@ -10,6 +10,7 @@ from parlai.utils.torch import padded_3d
 from parlai.core.torch_classifier_agent import TorchClassifierAgent
 from parlai.core.torch_ranker_agent import TorchRankerAgent
 from parlai.core.torch_generator_agent import TorchGeneratorAgent
+import torch.nn.functional as F
 
 from .modules import (
     TransformerMemNetModel,
@@ -315,6 +316,7 @@ class TransformerGeneratorAgent(TorchGeneratorAgent):
         Build and return model.
         """
         model = TransformerGeneratorModel(self.opt, self.dict)
+
         if self.opt['embedding_type'] != 'random':
             self._copy_embeddings(
                 model.encoder.embeddings.weight, self.opt['embedding_type']
@@ -381,3 +383,142 @@ class TransformerClassifierAgent(TorchClassifierAgent):
             self.base_model.load_state_dict(state_dict, strict=False)
         else:
             self.model.load_state_dict(state_dict)
+
+
+class TransformerMmiAgent(TransformerGeneratorAgent):
+    """
+    TransformerMMIAgent.
+
+    Implementation of TransformerGeneratorAgent, where the model is a Transformer and a backward model is used
+    to re-rank the beam
+    """
+    def __init__(self, opt, shared=None):
+        super().__init__(opt, shared)
+        if self.use_cuda:
+            self.backward_model.cuda()
+
+    @classmethod
+    def add_cmdline_args(cls, argparser):
+        """
+        Add command-line arguments specifically for this agent.
+        """
+        agent = argparser.add_argument_group('Transformer Arguments')
+        argparser.add_argument(
+            '-esz',
+            '--embedding-size',
+            type=int,
+            default=300,
+            help='Size of all embedding layers',
+        )
+        agent.add_argument('-bmf', '--backward-model-file', type=str, default="",help = 'backward model file')
+        agent.add_argument('-lambv', '--lambda-value', type=float, default=0.5, help="relative weight of P(S|T) vs P(T|S)")
+        add_common_cmdline_args(agent)
+        cls.dictionary_class().add_cmdline_args(argparser)
+
+        super(TransformerMmiAgent, cls).add_cmdline_args(argparser)
+        return agent
+
+    def build_model(self, states=None):
+        """
+        Build and return model.
+        """
+        print("intializing forward model...")
+        model = TransformerGeneratorModel(self.opt, self.dict)
+        old_model_file = self.opt['model_file']
+        self.opt['model_file'] = self.opt['backward_model_file']
+        print("intializing backwards model...")
+        self.backward_model = TransformerGeneratorModel(self.opt, self.dict)
+        self.lambda_value = self.opt['lambda_value']
+        self.opt['model_file'] = old_model_file
+
+        if self.opt['embedding_type'] != 'random':
+            self._copy_embeddings(
+                model.encoder.embeddings.weight, self.opt['embedding_type']
+            )
+            self._copy_embeddings(
+                self.backward_model.encoder.embeddings.weight, self.opt['embedding_type']
+            )
+
+        self.load(self.opt['backward_model_file'], backward=True)
+
+        return model
+
+    def load(self, path: str, backward=False):
+            """
+            Return opt and model states.
+
+            Override this method for more specific loading.
+            """
+            import parlai.utils.pickle
+            states = torch.load(
+                path, map_location=lambda cpu, _: cpu, pickle_module=parlai.utils.pickle
+            )
+
+            if not backward:
+                if 'model' in states:
+                    self.load_state_dict(states['model'])
+                if 'optimizer' in states and hasattr(self, 'optimizer'):
+                    self.optimizer.load_state_dict(states['optimizer'])
+                return states
+            else:
+                self.backward_model.load_state_dict(states['model'])
+                return None
+
+
+    def _generate(self, batch, beam_size, max_ts):
+
+        beam_preds_scores, beams = super()._generate(batch, beam_size, max_ts)
+        if len(beams) > 1: print('mmi not implemented for non-interactive batches greater than 1')
+        topk_beam_results = beams[0].get_rescored_finished()
+        [top_candidates, forward_probs] = list(zip(*topk_beam_results))
+        backward_probs = []
+        for cand, prob in topk_beam_results:
+            scores, preds, *_ = self.backward_model(torch.unsqueeze(cand, dim = 0), ys=batch.text_vec)
+            scores = F.log_softmax(scores, dim=-1)
+            seq_probs = [scores[:,i, vocab_idx] for (i,vocab_idx) in enumerate(batch.text_vec.view(-1))]
+            backward_probs.append(sum(seq_probs))
+
+        bidi_scores = [
+            (1-self.lambda_value)* lp_ts + self.lambda_value * lp_st
+            for (lp_ts, lp_st) in zip(forward_probs, backward_probs)
+        ]
+        resorted_n_best_beam_preds_scores = [
+            (cand, bidi_score) for (bidi_score,cand,) in
+            sorted(zip(bidi_scores, top_candidates), reverse=True)
+        ]
+
+        new_beam_preds_scores = [resorted_n_best_beam_preds_scores[0]]
+
+        def _print_beam_with_scores():
+            print(f"{'output':<45} {'P(T|S)':<7} {'P(S|T)':<7} {'bidi':<7} (lambda = {self.lambda_value})")
+            for cand, f_p, b_p, bidi_p in zip(top_candidates, forward_probs, backward_probs, bidi_scores):
+                print(f"{self._v2t(cand):<45} {f_p.item():<.3f} {b_p.item():<.3f} {bidi_p.item():<.3f}")
+
+        def _print_pd_scores():
+            import pandas as pd
+            from tabulate import tabulate
+
+            df = pd.DataFrame([
+                (self._v2t(cand), f_p, b_p, bidi_p)
+                for cand, f_p, b_p, bidi_p
+                in zip(top_candidates, forward_probs, backward_probs, bidi_scores)],
+                columns=[
+                    'output',
+                    'P(T|S)',
+                    'P(S|T)',
+                    'bidi_score'])
+            df.sort_values(by='bidi_score', ascending=False, inplace=True)
+            print(f"input: {self._v2t(batch.text_vec.view(-1))}")
+            print(f"bidi={1-self.lambda_value}*P(T|S) + {self.lambda_value}*P(S|T)")
+            print(tabulate(df, headers='keys'))
+
+
+        _print_pd_scores()
+
+        return new_beam_preds_scores, beams
+
+
+
+
+
+
