@@ -1,0 +1,31 @@
+2020 Mar 19 Thu 17:07:35 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/model_evaluator  1752  cd parlai/mturk/tasks/model_evaluator/
+2020 Mar 19 Thu 17:07:36 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/model_evaluator  1753  ls
+2020 Mar 19 Thu 17:12:51 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/model_evaluator  1754  python run.py -nc 1 -r 0 --sandbox
+2020 Mar 19 Thu 17:13:04 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/model_evaluator  1754  python run.py -nc 1 -r 0 --sandbox
+2020 Mar 19 Thu 17:15:34 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/model_evaluator  1754  python run.py -nc 1 -r 0 --sandbox
+2020 Mar 19 Thu 17:18:09 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/model_evaluator  1758  cd -
+2020 Mar 19 Thu 17:18:11 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/model_evaluator  1759  ls
+2020 Mar 19 Thu 17:18:18 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/model_evaluator  1760  python run.py -nc 1 -r 0 --sandbox
+2020 Mar 19 Thu 17:18:22 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/model_evaluator  1761  ls
+2020 Mar 19 Thu 17:18:27 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/model_evaluator  1762  rm *.log
+2020 Mar 19 Thu 17:21:13 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/model_evaluator  1763  python run.py -nc 1 -r 0 --sandbox
+2020 Mar 19 Thu 17:27:27 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/model_evaluator  1763  python run.py -nc 1 -r 0 --sandbox
+2020 Mar 19 Thu 17:28:48 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/model_evaluator  1764  /exp/rwicks/ParlAI/parlai/mturk/tmp/heroku-cli-v6.99.0-ec9edad-linux-x64/bin/heroku login
+2020 Mar 19 Thu 17:50:07 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/model_evaluator  1765  python run.py -nc 1 -r 0 --sandbox
+2020 Mar 19 Thu 17:52:12 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/model_evaluator  1765  python run.py -nc 1 -r 0 --sandbox
+2020 Mar 19 Thu 17:52:13 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/model_evaluator  1765  python run.py -nc 1 -r 0 --sandbox
+2020 Mar 19 Thu 17:52:14 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/model_evaluator  1766  ls
+2020 Mar 19 Thu 18:12:13 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/model_evaluator  1787  cd model_evaluator/
+2020 Mar 19 Thu 18:12:13 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/model_evaluator  1788  ls
+2020 Mar 19 Thu 18:12:27 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/model_evaluator  1789  vim run.py 
+2020 Mar 19 Thu 18:15:49 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/model_evaluator  1792  cd ../tasks/model_evaluator/
+2020 Mar 19 Thu 18:19:03 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/model_evaluator  1793  python run.py -nc 1 -r 0 --sandbox
+2020 Mar 19 Thu 18:19:12 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/model_evaluator  1794  python run.py --help
+2020 Mar 19 Thu 18:25:12 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/model_evaluator  1795  python run.py --sandbox
+2020 Mar 19 Thu 18:25:36 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/model_evaluator  1796  vim run.py 
+2020 Mar 19 Thu 18:30:27 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/model_evaluator  1797  python run.py --sandbox
+2020 Mar 19 Thu 18:31:17 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/model_evaluator  1801  cd ../tasks/model_evaluator/
+2020 Mar 19 Thu 18:32:10 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/model_evaluator  1802  python run.py --sandbox
+2020 Mar 19 Thu 18:34:59 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/model_evaluator  1806  cd -
+2020 Mar 19 Thu 18:47:04 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/model_evaluator  1807  python run.py --sandbox
+2020 Mar 19 Thu 20:32:35 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/model_evaluator  1022  cd model_evaluator/

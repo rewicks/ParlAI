@@ -314,15 +314,16 @@ def create_hit_type(
         locale_requirements.append(
             {
                 'QualificationTypeId': '00000000000000000071',
-                'Comparator': 'In',
-                'LocaleValues': [
-                    {'Country': 'US'},
-                    {'Country': 'CA'},
-                    {'Country': 'GB'},
-                    {'Country': 'AU'},
-                    {'Country': 'NZ'},
-                ],
-                'RequiredToPreview': True,
+                'Comparator': 'NotEqualTo',
+                'LocaleValues': [{'Country': 'VN'}],
+                #'LocaleValues': [
+                #    {'Country': 'US'},
+                #    {'Country': 'CA'},
+                #    {'Country': 'GB'},
+                #    {'Country': 'AU'},
+                #    {'Country': 'NZ'},
+                #],
+                'RequiredToPreview': False,
             }
         )
 

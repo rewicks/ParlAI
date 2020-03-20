@@ -323,6 +323,7 @@ class DialogPartnerWorld(World):
 
         Alternate between the two agents.
         """
+        import pdb; pdb.set_trace()
         acts = self.acts
         agents = self.agents
         acts[0] = agents[0].act()

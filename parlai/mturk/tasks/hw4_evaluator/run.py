@@ -4,7 +4,8 @@
 # This source code is licensed under the MIT license found in the
 # LICENSE file in the root directory of this source tree.
 from parlai.core.params import ParlaiParser
-from parlai.mturk.tasks.model_evaluator.worlds import (
+from parlai.core.agents import create_agent
+from parlai.mturk.tasks.hw4_evaluator.worlds import (
     ModelEvaluatorWorld,
     ModelEvaluatorOnboardWorld,
 )
@@ -14,23 +15,26 @@ import os
 
 
 def main():
-    argparser = ParlaiParser(False, False)
+    argparser = ParlaiParser(False, True)
     argparser.add_parlai_data_path()
     argparser.add_mturk_args()
 
     # The dialog model we want to evaluate
-    from parlai.agents.ir_baseline.ir_baseline import IrBaselineAgent
+    from parlai.agents.transformer.transformer import TransformerGeneratorAgent as Agent
 
-    IrBaselineAgent.add_cmdline_args(argparser)
+    Agent.add_cmdline_args(argparser)
     opt = argparser.parse_args()
     opt['task'] = os.path.basename(os.path.dirname(os.path.abspath(__file__)))
     opt.update(task_config)
+
+    opt['interactive_mode'] = True
+    opt['interactive_task'] = True
 
     # The task that we will evaluate the dialog model on
     task_opt = {}
     task_opt['datatype'] = 'test'
     task_opt['datapath'] = opt['datapath']
-    task_opt['task'] = '#MovieDD-Reddit'
+    task_opt['task'] = 'interactive'
 
     mturk_agent_id = 'Worker'
     mturk_manager = MTurkManager(opt=opt, mturk_agent_ids=[mturk_agent_id])
@@ -59,8 +63,9 @@ def main():
 
         def run_conversation(mturk_manager, opt, workers):
             mturk_agent = workers[0]
-
-            model_agent = IrBaselineAgent(opt=opt)
+            
+            model_agent = create_agent(opt, requireModelExists=True)
+            #model_agent = Agent(opt=opt)
 
             world = ModelEvaluatorWorld(
                 opt=opt,

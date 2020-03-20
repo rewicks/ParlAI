@@ -1,0 +1,186 @@
+2020 Mar 19 Thu 20:10:04 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1871  cd hw4_evaluator/
+2020 Mar 19 Thu 20:10:05 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1872  ls
+2020 Mar 19 Thu 20:10:09 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1873  rm *.log
+2020 Mar 19 Thu 20:14:42 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1874  vim run.py 
+2020 Mar 19 Thu 20:14:59 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1875  python run.py -mf ~/ParlAI/models/forward.model.checkpoint --sandbox
+2020 Mar 19 Thu 20:15:35 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1876  vim run.py 
+2020 Mar 19 Thu 20:15:38 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1877  python run.py -mf ~/ParlAI/models/forward.model.checkpoint --sandbox
+2020 Mar 19 Thu 20:22:56 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1878  vim run.py 
+2020 Mar 19 Thu 20:25:33 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1879  python run.py -mf ~/ParlAI/models/forward.model.checkpoint --sandbox
+2020 Mar 19 Thu 20:28:32 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1880  python run.py -mf ~/ParlAI/models/forward.model.checkpoint -t dailydialog --sandbox
+2020 Mar 19 Thu 20:28:32 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1880  python run.py -mf ~/ParlAI/models/forward.model.checkpoint -t dailydialog --sandbox
+2020 Mar 19 Thu 20:29:08 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1881  vim run.py 
+2020 Mar 19 Thu 20:29:32 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1882  python run.py --help
+2020 Mar 19 Thu 20:32:37 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1023  cd ../hw4_evaluator/
+2020 Mar 19 Thu 20:32:38 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1024  ls
+2020 Mar 19 Thu 20:33:12 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1025  vim run.py 
+2020 Mar 19 Thu 20:33:33 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1025  vim run.py 
+2020 Mar 19 Thu 20:35:39 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1883  python run.py -mf ~/ParlAI/models/forward.model.checkpoint --sandbox
+2020 Mar 19 Thu 20:38:50 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1026  tmux a -t parlai
+2020 Mar 19 Thu 20:42:52 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1883  python run.py -mf ~/ParlAI/models/forward.model.checkpoint --sandbox
+2020 Mar 19 Thu 20:45:28 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1027  vim worlds.py 
+2020 Mar 19 Thu 20:45:44 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1883  python run.py -mf ~/ParlAI/models/forward.model.checkpoint --sandbox
+2020 Mar 19 Thu 20:45:44 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1883  python run.py -mf ~/ParlAI/models/forward.model.checkpoint --sandbox
+2020 Mar 19 Thu 20:51:28 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1038  cd hw4_evaluator/
+2020 Mar 19 Thu 20:51:29 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1039  ls
+2020 Mar 19 Thu 20:51:52 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1040  vim run.py 
+2020 Mar 19 Thu 20:52:13 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1883  python run.py -mf ~/ParlAI/models/forward.model.checkpoint --sandbox
+2020 Mar 19 Thu 20:52:44 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1883  python run.py -mf ~/ParlAI/models/forward.model.checkpoint --sandbox
+2020 Mar 19 Thu 21:01:51 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1041  vim worlds.py 
+2020 Mar 19 Thu 21:02:36 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1042  vim run.py 
+2020 Mar 19 Thu 21:05:38 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1043  vim run.sh
+2020 Mar 19 Thu 21:05:41 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1883  python run.py -mf ~/ParlAI/models/forward.model.checkpoint --sandbox
+2020 Mar 19 Thu 21:05:51 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1884  sh run.sh
+2020 Mar 19 Thu 21:06:04 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1043  vim run.sh
+2020 Mar 19 Thu 21:08:10 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1884  sh run.sh
+2020 Mar 19 Thu 21:08:32 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1044  vim run.py 
+2020 Mar 19 Thu 21:09:08 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1045  tmux a
+2020 Mar 19 Thu 21:09:22 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1046  vim ~nweir/.bashrc
+2020 Mar 19 Thu 21:09:26 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1047  cd ~nweir
+2020 Mar 19 Thu 21:10:10 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1048  vim run.
+2020 Mar 19 Thu 21:10:25 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1049  vim run.py
+2020 Mar 19 Thu 21:13:02 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1050  vim worlds.py 
+2020 Mar 19 Thu 21:13:44 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1051  vim run.py 
+2020 Mar 19 Thu 21:14:13 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1884  sh run.sh
+2020 Mar 19 Thu 21:14:45 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1052  vim worlds.py 
+2020 Mar 19 Thu 21:15:16 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1053  vim ~/.bashrc 
+2020 Mar 19 Thu 21:17:11 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1054  tmux a
+2020 Mar 19 Thu 21:19:42 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1054  tmux a
+2020 Mar 19 Thu 21:19:48 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1055  vim run.py 
+2020 Mar 19 Thu 21:20:25 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1056  vim worlds.py 
+2020 Mar 19 Thu 21:21:26 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1884  sh run.sh
+2020 Mar 19 Thu 21:21:42 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1885  ls
+2020 Mar 19 Thu 21:21:46 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1886  rm *.log
+2020 Mar 19 Thu 21:21:59 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1887  vim run.py 
+2020 Mar 19 Thu 21:24:09 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1888  sh run.sh
+2020 Mar 19 Thu 21:24:44 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1060  cd parlai/mturk/tasks/hw4_evaluator/
+2020 Mar 19 Thu 21:24:55 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1889  sh run.
+2020 Mar 19 Thu 21:24:57 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1890  sh run.s
+2020 Mar 19 Thu 21:25:06 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1061  vim run.py 
+2020 Mar 19 Thu 21:26:22 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1891  sh run.sh 
+2020 Mar 19 Thu 21:28:12 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1062  tmux a
+2020 Mar 19 Thu 21:29:54 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1891  sh run.sh 
+2020 Mar 19 Thu 21:30:30 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1063  vim run.py 
+2020 Mar 19 Thu 21:30:37 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1064  mv run.py single-run.py
+2020 Mar 19 Thu 21:30:53 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1066  cd hw4_evaluator/
+2020 Mar 19 Thu 21:31:01 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1067  mv worlds.py single-worlds.py
+2020 Mar 19 Thu 21:31:02 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1068  ls
+2020 Mar 19 Thu 21:31:05 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1069  rm *.log
+2020 Mar 19 Thu 21:31:17 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1070  mv task_config.py single-task_config.py
+2020 Mar 19 Thu 21:31:23 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1071  cp ../multi_agent_dialog/*.py ./
+2020 Mar 19 Thu 21:31:23 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1072  ls
+2020 Mar 19 Thu 21:32:16 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1073  vim run.py 
+2020 Mar 19 Thu 21:32:35 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1073  vim run.py 
+2020 Mar 19 Thu 21:32:45 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1073  vim run.py 
+2020 Mar 19 Thu 21:32:58 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1074  vim single-run.py 
+2020 Mar 19 Thu 21:33:15 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1075  vim run.py 
+2020 Mar 19 Thu 21:33:23 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1076  sh run.sh 
+2020 Mar 19 Thu 21:33:30 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1892  sh run.sh
+2020 Mar 19 Thu 21:33:48 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1893  python run.py --sandbox
+2020 Mar 19 Thu 21:34:33 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1077  tmux a
+2020 Mar 19 Thu 21:37:01 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1894  vim run.py 
+2020 Mar 19 Thu 21:37:08 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1895  sh run.sh
+2020 Mar 19 Thu 21:37:34 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1896  vim run.py 
+2020 Mar 19 Thu 21:37:58 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1896  vim run.py 
+2020 Mar 19 Thu 21:38:06 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1897  sh run.sh
+2020 Mar 19 Thu 21:38:07 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1898  :q
+2020 Mar 19 Thu 21:39:22 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1899  vim run.py 
+2020 Mar 19 Thu 21:39:27 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1078  vim single-run.py 
+2020 Mar 19 Thu 21:39:36 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1900  sh run.sh
+2020 Mar 19 Thu 21:40:26 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1901  python run.py -mf ~/ParlAI/models/forward.model --sandbox
+2020 Mar 19 Thu 21:40:28 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1902  ls
+2020 Mar 19 Thu 21:40:44 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1903  python single-run.py -mf ~/ParlAI/models/forward.model --sandbox
+2020 Mar 19 Thu 21:40:58 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1904  vim single-run.py 
+2020 Mar 19 Thu 21:41:07 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1905  mv worlds.py multi-worlds.py
+2020 Mar 19 Thu 21:41:11 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1906  mv single-worlds.py worlds.py
+2020 Mar 19 Thu 21:41:19 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1907  python single-run.py -mf ~/ParlAI/models/forward.model --sandbox
+2020 Mar 19 Thu 21:42:04 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1908  ls
+2020 Mar 19 Thu 21:42:11 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1909  vim task_config.py 
+2020 Mar 19 Thu 21:42:19 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1910  mv task_config.py multi_task_config.py
+2020 Mar 19 Thu 21:42:25 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1911  mv single-task_config.py task_config.py
+2020 Mar 19 Thu 21:43:11 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1079  tmux a
+2020 Mar 19 Thu 21:43:46 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1912  python single-run.py -mf ~/ParlAI/models/forward.model --sandbox
+2020 Mar 19 Thu 21:43:48 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1913  ls
+2020 Mar 19 Thu 21:43:54 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1913  ls
+2020 Mar 19 Thu 21:44:02 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1914  mv worlds.py single-worlds.py
+2020 Mar 19 Thu 21:44:09 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1915  mv multi-worlds.py worlds.py
+2020 Mar 19 Thu 21:44:13 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1916  sh run.sh
+2020 Mar 19 Thu 21:44:23 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1916  sh run.sh
+2020 Mar 19 Thu 21:49:58 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1084  cd parlai/mturk/tasks/hw4_evaluator/
+2020 Mar 19 Thu 21:50:07 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1085  vim run.
+2020 Mar 19 Thu 21:50:37 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1086  vim run.py
+2020 Mar 19 Thu 21:50:42 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1087  mv run.py multi-run.py
+2020 Mar 19 Thu 21:50:43 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1917  vim single-run.py 
+2020 Mar 19 Thu 21:50:48 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1918  mv single-run.py run.py
+2020 Mar 19 Thu 21:53:26 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1919  vim run.py 
+2020 Mar 19 Thu 21:53:32 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1088  vim multi-run.py 
+2020 Mar 19 Thu 21:54:53 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1920  sh run.sh 
+2020 Mar 19 Thu 21:54:55 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1089  tmux a
+2020 Mar 19 Thu 21:56:42 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1921  vim run.py 
+2020 Mar 19 Thu 21:58:10 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1922  sh run.sh 
+2020 Mar 19 Thu 21:58:31 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1923  vim run.py 
+2020 Mar 19 Thu 22:00:08 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1924  sh run.sh 
+2020 Mar 19 Thu 22:00:31 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1925  vim run.py 
+2020 Mar 19 Thu 22:01:42 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1096  cd - 
+2020 Mar 19 Thu 22:02:44 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1926  sh run.sh 
+2020 Mar 19 Thu 22:02:48 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1927  vim run.
+2020 Mar 19 Thu 22:03:41 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1928  vim run.py 
+2020 Mar 19 Thu 22:06:20 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1929  sh run.sh 
+2020 Mar 19 Thu 22:06:21 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1930  ls
+2020 Mar 19 Thu 22:06:26 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1931  ls ..
+2020 Mar 19 Thu 22:07:13 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1932  ls
+2020 Mar 19 Thu 22:07:14 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1933  clear
+2020 Mar 19 Thu 22:07:45 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1934  vim worlds.py 
+2020 Mar 19 Thu 22:07:51 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1935  ls
+2020 Mar 19 Thu 22:08:12 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1936  vim run.py 
+2020 Mar 19 Thu 22:09:51 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1097  vim multi-run.py 
+2020 Mar 19 Thu 22:12:22 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1937  sh run.sh 
+2020 Mar 19 Thu 22:13:13 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1098  vim worlds.py 
+2020 Mar 19 Thu 22:13:22 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1099  ls
+2020 Mar 19 Thu 22:13:36 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1101  cd hw4_evaluator/
+2020 Mar 19 Thu 22:13:39 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1102  rm *.log
+2020 Mar 19 Thu 22:13:42 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1103  ls
+2020 Mar 19 Thu 22:13:46 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1104  rm worlds.py 
+2020 Mar 19 Thu 22:13:48 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1105  rm task_config.py 
+2020 Mar 19 Thu 22:13:50 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1106  rm *.py
+2020 Mar 19 Thu 22:13:51 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1107  ls
+2020 Mar 19 Thu 22:14:01 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1108  cp ../model_evaluator/* ./
+2020 Mar 19 Thu 22:14:02 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1109  ls
+2020 Mar 19 Thu 22:14:05 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1110  rm *.log
+2020 Mar 19 Thu 22:15:11 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1111  vim run.py 
+2020 Mar 19 Thu 22:16:49 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1937  sh run.sh 
+2020 Mar 19 Thu 22:17:04 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1112  vim task_config.py 
+2020 Mar 19 Thu 22:18:19 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1113  vim run.py 
+2020 Mar 19 Thu 22:18:26 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1937  sh run.sh 
+2020 Mar 19 Thu 22:18:51 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1938  vim run.py 
+2020 Mar 19 Thu 22:20:14 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1939  sh run.sh 
+2020 Mar 19 Thu 22:20:37 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1940  vim run.py 
+2020 Mar 19 Thu 22:22:04 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1941  sh run.sh 
+2020 Mar 19 Thu 22:22:21 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1942  vim worlds.py 
+2020 Mar 19 Thu 22:24:56 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1114  vim ~/ParlAI/parlai/core/worlds.py 
+2020 Mar 19 Thu 22:25:27 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1943  sh run.sh 
+2020 Mar 19 Thu 22:26:51 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1115  vim worlds.py 
+2020 Mar 19 Thu 22:28:04 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1116  vim run.py 
+2020 Mar 19 Thu 22:28:16 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1117  vim ../multi_agent_dialog/run.py 
+2020 Mar 19 Thu 22:28:32 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1118  vim run.py 
+2020 Mar 19 Thu 22:29:01 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1119  vim worlds.py 
+2020 Mar 19 Thu 22:29:12 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1943  sh run.sh 
+2020 Mar 19 Thu 22:32:06 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1943  sh run.sh 
+2020 Mar 19 Thu 22:36:03 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1943  sh run.sh 
+2020 Mar 19 Thu 22:36:17 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1944  vim run.py 
+2020 Mar 19 Thu 22:36:24 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1945  vim worlds.py 
+2020 Mar 19 Thu 22:38:05 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1946  sh run.sh 
+2020 Mar 19 Thu 22:38:46 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1947  vim ~/ParlAI/parlai/core/worlds.py 
+2020 Mar 19 Thu 22:45:50 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1948  sh run.sh 
+2020 Mar 19 Thu 22:47:48 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1949  vim ~/ParlAI/parlai/core/torch_agent.py 
+2020 Mar 19 Thu 22:51:38 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1953  cd parlai/mturk/tasks/hw4_evaluator/
+2020 Mar 19 Thu 23:04:50 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1120  vim run.py 
+2020 Mar 19 Thu 23:05:05 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1954  sh run.sh 
+2020 Mar 19 Thu 23:05:10 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1954  sh run.sh 
+2020 Mar 19 Thu 23:05:26 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1955  vim run.py 
+2020 Mar 19 Thu 23:06:44 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1956  sh run.sh 
+2020 Mar 19 Thu 23:07:23 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1957  vim run.py 
+2020 Mar 19 Thu 23:10:13 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1121  tmux a
+2020 Mar 19 Thu 23:13:26 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1126  cd parlai/mturk/tasks/hw4_evaluator/
+2020 Mar 19 Thu 23:16:30 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1127  sh run.sh 
+2020 Mar 19 Thu 23:16:37 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks/hw4_evaluator  1128  tmux a
