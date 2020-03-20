@@ -1,0 +1,12 @@
+2020 Mar 19 Thu 18:12:11 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks  1785  cd tasks/
+2020 Mar 19 Thu 18:12:11 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks  1786  ls
+2020 Mar 19 Thu 18:56:53 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks  1808  cd ..
+2020 Mar 19 Thu 20:09:44 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks  1868  cd parlai/mturk/tasks/
+2020 Mar 19 Thu 20:09:45 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks  1869  ls
+2020 Mar 19 Thu 20:10:02 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks  1870  cp -r model_evaluator/ hw4_evaluator
+2020 Mar 19 Thu 20:32:30 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks  1020  cd tasks/
+2020 Mar 19 Thu 20:32:31 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks  1021  ls
+2020 Mar 19 Thu 20:51:24 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks  1036  cd parlai/mturk/tasks/
+2020 Mar 19 Thu 20:51:25 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks  1037  ls
+2020 Mar 19 Thu 21:30:40 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks  1065  cd ..
+2020 Mar 19 Thu 22:13:28 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/tasks  1100  cd ..

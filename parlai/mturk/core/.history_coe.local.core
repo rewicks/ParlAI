@@ -1,0 +1,8 @@
+2020 Mar 19 Thu 18:12:48 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/core  1790  cd ../../core/
+2020 Mar 19 Thu 18:15:44 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/core  1791  vim mturk_manager.py 
+2020 Mar 19 Thu 18:30:33 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/core  1798  cd ../../core/
+2020 Mar 19 Thu 18:30:34 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/core  1799  ls
+2020 Mar 19 Thu 18:31:11 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/core  1800  vim mturk_utils.py 
+2020 Mar 19 Thu 18:34:05 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/core  1803  cd -
+2020 Mar 19 Thu 18:34:53 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/core  1804  vim mturk_utils.py 
+2020 Mar 19 Thu 18:34:55 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/mturk/core  1805  python run.py --sandbox

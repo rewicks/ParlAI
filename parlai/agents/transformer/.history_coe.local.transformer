@@ -1,0 +1,9 @@
+2020 Mar 19 Thu 20:12:06 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/agents/transformer  1005  cd transformer/
+2020 Mar 19 Thu 20:12:07 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/agents/transformer  1006  ls
+2020 Mar 19 Thu 20:12:50 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/agents/transformer  1007  vim transformer.py 
+2020 Mar 19 Thu 20:13:34 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/agents/transformer  1011  cd ../transformer/
+2020 Mar 19 Thu 20:13:35 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/agents/transformer  1012  ls
+2020 Mar 19 Thu 20:13:59 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/agents/transformer  1013  vim generator.py 
+2020 Mar 19 Thu 20:15:18 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/agents/transformer  1014  vim __init__.py 
+2020 Mar 19 Thu 20:22:39 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/agents/transformer  1015  vim transformer.py wq
+2020 Mar 19 Thu 20:32:21 EDT test1 /home/hltcoe/rwicks/ParlAI/parlai/agents/transformer  1016  tmux a -t parlai
