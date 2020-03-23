@@ -5,11 +5,14 @@ Carlos Aguirre, Rachel Wicks, Nathaniel Weir
 
 **Link to models and screenshots** https://livejohnshopkins-my.sharepoint.com/:f:/g/personal/rwicks4_jh_edu/EmeBkYT-nYlOmRK--9afkkYB5jMfMZZ6RDVhICwspjrVUA?e=ACey6I
 
+## Data filtering
+We implement the entropy-based data filtering technique from [Csaky et al. 19](https://www.aclweb.org/anthology/P19-1567.pdf). We filter using their IDENTITY BOTH method, removing all examples with either a high source or target entropy. We select our entropy threshold to align with the fraction of data removed in the paper (about 85%). Our filtering script for applying to OpenSubtitles (from which we construct a new task, Filtered-OpenSubtitles) is [here](https://github.com/rewicks/ParlAI/blob/master/parlai/scripts/entropy_filter.py). 
+
 ## Method for training P(S|T)
 We implement a FlippedTeacher agent which reads in the data in the same way as the P(T|S) model, but reverses the input and output. We admit that this provides a problem for the history, which is also in a reversed order. While this does not pose a problem for training, it creates a mismatched testing environment as the history is encoded in order.
 
 ## MMI-BIDI Objective
-We implement beam search reranking.
+We implement beam search candidate reranking with a beam size of 15. This is implemented in a new agent, [TransformerMmiAgent](https://github.com/rewicks/ParlAI/blob/69e6e6868ddd9dcb17c31fdab2a39a87086c0cb6/parlai/agents/transformer/transformer.py#L388), an extension of the TransformerGeneratorAgent that stores an extra generation model (`self.backward_model`) and reranks the output candidates returned by its parent class's implementation of `self._generate()`. 
 
 ## Evaluation
 We hooked up our model to the Mechanical Turk Sandbox. Instead of sampling from DailyDialog, or any other dataset, we allow the Turker to provide the input to the model. Below, we show screenshots of nine examples from the Sandbox. Additionally, we show the re-ranked beams with the original ranking, the log-liklihood of the forward and backwards models and the re-ranked score. To calculate this, we use the equation:
