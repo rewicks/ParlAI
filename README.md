@@ -1,9 +1,9 @@
 # HW4
 Carlos Aguirre, Rachel Wicks, Nathaniel Weir
 
-*Fork link* https://github.com/rewicks/ParlAI
+**Fork link** https://github.com/rewicks/ParlAI
 
-*Link to models and screenshots* https://livejohnshopkins-my.sharepoint.com/:f:/g/personal/rwicks4_jh_edu/EmeBkYT-nYlOmRK--9afkkYB5jMfMZZ6RDVhICwspjrVUA?e=ACey6I
+**Link to models and screenshots** https://livejohnshopkins-my.sharepoint.com/:f:/g/personal/rwicks4_jh_edu/EmeBkYT-nYlOmRK--9afkkYB5jMfMZZ6RDVhICwspjrVUA?e=ACey6I
 
 ## Method for training P(S|T)
 We implement a FlippedTeacher agent which reads in the data in the same way as the P(T|S) model, but reverses the input and output. We admit that this provides a problem for the history, which is also in a reversed order. While this does not pose a problem for training, it creates a mismatched testing environment as the history is encoded in order.
@@ -14,9 +14,9 @@ We implement beam search reranking.
 ## Evaluation
 We hooked up our model to the Mechanical Turk Sandbox. Instead of sampling from DailyDialog, or any other dataset, we allow the Turker to provide the input to the model. Below, we show screenshots of nine examples from the Sandbox. Additionally, we show the re-ranked beams with the original ranking, the log-liklihood of the forward and backwards models and the re-ranked score. To calculate this, we use the equation:
 
-$$BIDI=\lambda*P(T|S) + \lambda*P(S|T)$$
+```BIDI=\lambda*P(T|S) + \lambda*P(S|T)```
 
-We found that $$\lambda=0.5$$ provided reasonable balance between the two models.
+We found that 0.5 for lambda provided reasonable balance between the two models.
 
 ![](screenshots/screenshot1.png)
 ```
